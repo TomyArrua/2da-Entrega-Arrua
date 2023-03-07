@@ -1,0 +1,675 @@
+
+/*------------ PRIMERA PARTE HOME ----------------*/
+
+.front__page__home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/encabezado.jpg');
+    height: 139vh;
+    font-family: 'Jost', sans-serif;
+    background-size: cover;
+}
+.bind{
+    text-decoration: none;
+    color: #F0F8FF;
+}
+
+.front__page__home a img {
+    border-radius: 50px;
+    
+}
+
+.front__page__home ul {
+    
+    list-style: none;
+}
+
+.front__page__home nav {
+    padding: 1.5rem;
+}
+
+.bind {
+    background-image: linear-gradient(white, white);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+    margin-left: 2rem;
+}
+.bind:hover, a:focus {
+    background-size: 100% 2px;
+}
+
+.links__home {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 10rem);
+    grid-template-rows: repeat(1, 6.5rem);
+    font-size: 13px;
+    color: #F0F8FF;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    align-items: center;
+}
+
+.ciclo__virtuosoo {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+.ciclo__virtuosoo span {
+    border: 3px outset #F0F8FF;
+    border-radius: 50%;
+    text-align: center;
+}
+
+/*-------------     SEGUNDA PARTE ---------------*/
+
+.second__part__home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/eucalipto-globulus-ence-sld-1-1030x664.jpg');
+    height: 92vh;
+    padding: 10rem 0 0 15rem;
+    font-family: 'Inconsolata', monospace;
+    line-height: 1.5rem;
+}
+
+.second__part__home section {
+    width: 50rem;
+    height: 25rem;
+    background-color: rgba(94, 208, 138, 0.7);
+    padding: 2rem;
+    color: #dcc2e4;
+}
+
+.second__part__home p {
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+}
+
+.second__part__home h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.second__part__home .material-symbols-outlined {
+    font-size: 3rem;
+    color: #F0F8FF;
+    margin-top: 2rem;
+}
+
+/*------------- TERCERA PARTE HOME ------------------*/
+
+.third__part__home {
+    background-image: url('../img/PLANTA.jpg');
+    height: 110vh;
+    background-size: cover;
+    padding: 4rem 0 0 26rem;
+}
+
+.third__part__home section {
+    background-color: rgba(89, 0, 141, 0.5); 
+    width: 40rem;
+    height: 28rem;
+    font-size: 1.8rem;
+}
+
+.third__part__home h3 {
+    font-size: 2.5rem;
+}
+
+.third__part__home .material-symbols-outlined {
+    margin-right: 2rem;
+    font-size: 3rem;
+    color: #FFFAFA;
+}
+
+/*------------- CUARTA PARTE HOME ------------------------*/
+
+.quarter__part__home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/sustentables.jpg');
+    height: 106vh;
+    background-size: cover;
+    color: #F0FFF0;
+    padding: 11rem 0 0 15rem;
+    font-family: 'Inconsolata', monospace;
+}
+
+.quarter__part__home section {
+    width: 35rem;
+    height: 25rem;
+}
+
+.quarter__part__home .material-symbols-outlined {
+    margin-right: 2rem;
+    font-size: 3rem;
+    color: #F0F8FF;
+}
+
+/*------------  QUINTA PARTE HOME ------------*/
+
+
+.fifth__part__home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/COMUNIDADD.jpg');
+    height: 90vh;
+    color: #F0FFF0;
+}
+
+.fifth__part__home section {
+    background-color: rgba(108, 0, 255, 0.6);
+    width: 42rem;
+    height: 38rem;
+    clip-path: polygon(30% 0%, 50% 15%, 70% 0%, 90% 10%, 91% 30.5%, 80% 70%, 50% 100%, 20% 70%, 8.2% 33.5%, 10% 10%);
+    padding: 4rem 0 0 0 ;
+    text-align: center;
+    transform: translate(28rem, 2rem);
+    font-family: 'Inconsolata', monospace;
+    
+}
+
+.fifth__part__home .material-symbols-outlined {
+    font-size: 3rem;
+}
+
+/*-------------- PIE DE PAGINA  ------------------*/
+
+.footer__page {
+        font-family: 'Inconsolata', monospace;
+        background: rgb(46,185,181);
+        background: linear-gradient(90deg, rgba(46,185,181,0.7652310924369747) 72%, rgba(131,58,180,1) 100%, rgba(253,35,31,1) 100%, rgba(253,39,32,1) 100%, rgba(252,176,69,1) 100%, rgba(253,213,29,1) 100%);
+        height: 120vh;
+        font-size: 1.5rem;
+    }
+
+footer {
+    margin-top: 1.5rem;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    margin-top: 30px;
+    position: relative;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    background: #350642;
+    color: #dcc2e4;
+    cursor: pointer;
+    transition: .5s;
+    overflow: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 5px;
+}
+
+button:hover {
+    color: #fff;
+}
+
+button b {
+    position: absolute;
+    background: #fff;
+    transition: .5s;
+}
+
+button b:nth-child(1) {
+    width: 100%;
+    height: 1px;
+    top: 0;
+    left: -100%;
+}
+
+button b:nth-child(2) {
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    right: -100%;
+}
+
+button b:nth-child(3) {
+    width: 1px;
+    height: 100%;
+    bottom: -100%;
+    left: 0;
+}
+
+button b:nth-child(4) {
+    width: 1px;
+    height: 100%;
+    top: -100%;
+    right: 0;
+}
+
+button:hover b:nth-child(1) {
+    left: 0;
+}
+
+button:hover b:nth-child(2) {
+    right: 0;
+}
+
+button:hover b:nth-child(3) {
+    bottom: 0;
+}
+
+button:hover b:nth-child(4) {
+    top: 0;
+}
+
+
+/*---------------------- PRIMERA PARTE BIOMASA -----------------*/
+
+.front__page__biomasa {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/portadaBiomasa.jpg');
+    height: 90vh;
+    font-family: 'Jost', sans-serif;
+    background-size: cover;
+    color: #F0F8FF;
+}
+
+.what__is__biomass {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.what__is__biomass a {
+    transform: translate(-40rem, 20rem);
+}
+
+
+/*----------------- SEGUNDA PARTE BIOMASA -------------------*/
+
+.second__part__biomasa {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100vh;
+    font-family: 'Dosis', sans-serif;
+    justify-items: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1); 
+}
+
+.second__part__biomasa1 {
+    background-color: rgba(0, 138, 8, 0.7); ;
+    width: 18rem;
+    height: 30rem;
+    font-size: 18px;
+    padding: 2rem;
+}
+
+.second__part__biomasa1 h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.second__part__biomasa2 {
+    width: 22rem;
+    height: 33rem;
+    font-size: 20px;
+    padding: 2rem; 
+    background-color: rgba(0, 0, 0, 0.2); 
+}
+
+.second__part__biomasa2 b {
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+/*------------------- TERCERA PARTE BIOMASA -------------------*/
+
+.third__part__biomasa {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/APILADAS.jpg');
+    height: 100vh;
+    background-size: cover;
+    color: #F0FFF0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.images__biomasa {
+    display: grid;
+    grid-template-columns: repeat(6, 5rem);
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: start;
+    font-family: 'Dosis', sans-serif;
+    
+}
+
+.images__biomasa span {
+    line-height: 3rem;
+}
+
+.images__biomasa {
+    position: relative;
+    left: 40rem;
+    top: -20rem;
+}
+
+.third__part__biomasa1 {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 28rem;
+    height: 38rem;
+    font-family: 'Dosis', sans-serif;
+    padding: 2rem 0 0 4rem;
+    color: rgba(0,0,0,0.76);
+    margin: 3em 0 0 5em;
+    font-size: 1.5rem;
+}
+
+.third__part__biomasa1 h3 {
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.third__part__biomasa .formatos {
+    font-size: 26px;
+    width: 22rem;
+    height: 10rem;
+    padding: 2rem;
+    background-color: rgba(0,0,92,0.56);
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+    margin-top: 8rem;
+    position: relative;
+    left: 6rem;
+}
+
+.quarter__part__biomasa {
+    height: 90vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.3)), url('../img/ALAMCENAMIENTO.jpg');
+    background-size: cover;
+    font-family: 'Dosis', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.quarter__part__biomasa section {
+    background-color: rgba(255,148,54,0.66);
+    width: 28rem;
+    height: 33rem;
+    padding: 2rem 0 0 0;
+    text-align: center;
+    margin-top: 3rem;
+    
+}
+
+.quarter__part__biomasa h4 {
+    font-size: 48px;
+    margin-bottom: 1.5rem;
+}
+
+.quarter__part__biomasa p {
+    font-size: 26px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------- MEDIA QUERY --------------------*/
+
+@media screen and (max-width: 395px) {
+    body {
+        width: 100%;
+        
+    }
+
+    .front__page__home {
+        height: 136vh;
+    }
+
+    .links__home {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .links__home span {
+        display: none;
+    }
+
+    
+
+    .ciclo__virtuosoo span {
+        border: 0;
+    }
+
+/*--------- SEGUNDA PARTE HOME -----------*/
+
+
+    .second__part__home {
+        padding: 3rem 0 0 2rem;
+        background-size: cover;
+        height: 105vh;
+
+    }
+
+    .second__part__home section{
+        width: 19rem;
+        height: 48rem;
+        padding: 2rem;
+        
+    }
+
+
+/*---------------- TERCERA PARTE HOME --------------*/
+
+
+    .third__part__home {
+        background-size: cover;
+        padding: 3rem 0 0 2rem;
+        height: 80vh;
+        
+    }
+
+    .third__part__home section {
+        width: 19rem;
+        height: 35rem;
+        font-size: 1.2rem;
+        
+    }
+    
+
+    /*------------- CUARTA PARTE HOME -----------------*/
+
+
+    .quarter__part__home {
+        background-size: cover;
+        padding: 3rem 0 0 3rem;
+        height: 80vh;
+    }
+
+    .quarter__part__home section {
+        width: 18rem;
+        height: 38rem;
+    }
+
+    .quarter__part__home .material-symbols-outlined {
+        margin-top: 2rem;
+    }
+
+
+    /*-----------------  QUINTA PARTE HOME ------------------*/
+
+
+    .fifth__part__home {
+        background-size: cover;
+        
+        height: 83vh;
+    }
+
+    .fifth__part__home section {
+        width: 18rem;
+        height: 40rem;
+        transform: translate(2rem, 2rem);
+        padding: 1rem;
+        clip-path: none;
+    }
+
+    .fifth__part__home .material-symbols-outlined {
+        display: grid;
+        justify-content: end;
+    }
+
+
+    /*----------------------- PIE DE PAGINA ---------------------*/
+
+    .footer__page {
+        font-size: .8rem;
+        height: 72vh;
+    }
+    textarea {
+        width: 12.6rem;
+    }
+
+    footer {
+        margin-top: 1.5rem;
+        
+    }
+
+    button {
+        margin: 0;
+    }
+    .marca {
+        margin-top: 5rem;
+    }
+}
+
+
+/*------------------- MEDIA QUERY BIOMASA ---------------------*/
+
+
+@media screen and (max-width: 576px){
+
+/*----------------------   PRIMERA PARTE BIOMASA -------------*/    
+
+    .front__page__biomasa {
+        height: 70vh;
+        width: 100%;
+    }
+
+    .what__is__biomass {
+        
+        background-size: cover;
+        
+    }
+    .what__is__biomass {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5rem;
+        
+    }
+    .what__is__biomass a {
+        transform: translate(0, 0);
+    }
+    
+
+/*-------------------- SEGUNDA PARTE BIOMASA -----------------*/
+
+.second__part__biomasa {
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 10px;
+}
+
+.second__part__biomasa1 {
+    margin-left: 2rem;
+    font-size: 14px;
+    height: 23rem;
+}
+
+.second__part__biomasa1 h2 {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.second__part__biomasa2 b {
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+}
+
+.second__part__biomasa2 {
+    font-size: 14px;
+    height: 18rem;
+    padding: 1rem;
+    margin-left: 1rem;
+}
+
+
+/*-------------------- TERCERA PARTE BIOMASA --------------------------*/
+
+.third__part__biomasa {
+    width: 100%;
+    height: 200vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.images__biomasa {
+    display: grid;
+    grid-template-columns: repeat(2, 5rem);
+    gap: 5rem;
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-left: 3rem;
+}
+
+.third__part__biomasa {
+    height: 175vh;
+}
+
+.third__part__biomasa1 {
+    width: 19rem;
+    font-size: 1rem;
+    margin-left: 2rem;
+    padding: 1rem;
+    text-align: center;
+    height: 25rem;
+    
+}
+
+.third__part__biomasa1 h3 {
+    font-size: 2rem;
+
+}
+
+.third__part__biomasa .formatos {
+    width: 20rem;
+    padding: 1rem;
+    height: 8rem;
+    transform: translate(-5rem, -5rem);
+    font-size: 1.2em;
+    
+    
+}
+
+/*-------------------- CUARTA PARTE BIOMASA ----------------*/
+
+.quarter__part__biomasa section {
+    width: 20rem;
+    font-size: 10px;
+}
+
+}

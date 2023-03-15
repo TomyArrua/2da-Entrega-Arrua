@@ -811,6 +811,137 @@ button:hover b:nth-child(4) {
     }
 }
 
+/*------------- MEDIA QUERY HOME -----------------*/
+
+@media screen and (max-width: 576px) {
+    body {
+        width: 100%;
+        
+    }
+
+    .front__page__home {
+        height: 136vh;
+    }
+
+    .links__home {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .links__home span {
+        display: none;
+    }
+
+    
+
+    .ciclo__virtuosoo span {
+        border: 0;
+    }
+
+/*--------- SEGUNDA PARTE HOME -----------*/
+
+
+    .second__part__home {
+        padding: 3rem 0 0 2rem;
+        background-size: cover;
+        height: 105vh;
+
+    }
+
+    .second__part__home section{
+        width: 19rem;
+        height: 48rem;
+        padding: 2rem;
+        
+    }
+
+
+/*---------------- TERCERA PARTE HOME --------------*/
+
+
+    .third__part__home {
+        background-size: cover;
+        padding: 3rem 0 0 2rem;
+        height: 80vh;
+        
+    }
+
+    .third__part__home section {
+        width: 19rem;
+        height: 35rem;
+        font-size: 1.2rem;
+        
+    }
+    
+
+    /*------------- CUARTA PARTE HOME -----------------*/
+
+
+    .quarter__part__home {
+        background-size: cover;
+        padding: 3rem 0 0 3rem;
+        height: 80vh;
+    }
+
+    .quarter__part__home section {
+        width: 18rem;
+        height: 38rem;
+    }
+
+    .quarter__part__home .material-symbols-outlined {
+        margin-top: 2rem;
+    }
+
+
+    /*-----------------  QUINTA PARTE HOME ------------------*/
+
+
+    .fifth__part__home {
+        background-size: cover;
+        
+        height: 83vh;
+    }
+
+    .fifth__part__home section {
+        width: 18rem;
+        height: 40rem;
+        transform: translate(2rem, 2rem);
+        padding: 1rem;
+        clip-path: none;
+    }
+
+    .fifth__part__home .material-symbols-outlined {
+        display: grid;
+        justify-content: end;
+    }
+
+
+    /*----------------------- PIE DE PAGINA ---------------------*/
+
+    .footer__page {
+        font-size: .8rem;
+        height: 72vh;
+    }
+    textarea {
+        width: 12.6rem;
+    }
+
+    footer {
+        margin-top: 1.5rem;
+        
+    }
+
+    button {
+        margin: 0;
+    }
+    .marca {
+        margin-top: 5rem;
+    }
+}
+
 
 /*------------------- MEDIA QUERY BIOMASA ---------------------*/
 

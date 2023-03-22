@@ -1,966 +1,1317 @@
-
-/*------------ PRIMERA PARTE HOME ----------------*/
-
-.front__page__home {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/encabezado.jpg');
-    height: 139vh;
-    font-family: 'Jost', sans-serif;
-    background-size: cover;
-}
-.bind{
-    text-decoration: none;
-    color: #F0F8FF;
-}
-
-.front__page__home a img {
-    border-radius: 50px;
-    
-}
-
-.front__page__home ul {
-    
-    list-style: none;
-}
-
-.front__page__home nav {
-    padding: 1.5rem;
-}
-
-.bind {
-    background-image: linear-gradient(white, white);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    transition: background-size .3s;
-    margin-left: 2rem;
-}
-.bind:hover, a:focus {
-    background-size: 100% 2px;
-}
-
+/*---------------- MEDIA QUERY --------------*/
 .links__home {
-    justify-content: center;
-    display: grid;
-    grid-template-columns: repeat(4, 10rem);
-    grid-template-rows: repeat(1, 6.5rem);
-    font-size: 13px;
-    color: #F0F8FF;
-    font-family: 'Roboto Condensed', sans-serif;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    align-items: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 10rem);
+  grid-template-rows: repeat(1, 6.5rem);
+  font-size: 13px;
+  color: #F0F8FF;
+  font-family: "Roboto Condensed", sans-serif;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  align-items: center;
 }
 
-.ciclo__virtuosoo {
-    padding-top: 3rem;
-    padding-bottom: 2rem;
+.material-symbols-outlined, .third__part__home section .material-symbols-outlined, .second__part__home section .material-symbols-outlined {
+  font-size: 3rem;
+  color: #F0F8FF;
+  margin-top: 2rem;
 }
 
-.ciclo__virtuosoo span {
-    border: 3px outset #F0F8FF;
-    border-radius: 50%;
-    text-align: center;
-}
-
-/*-------------     SEGUNDA PARTE ---------------*/
-
-.second__part__home {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/eucalipto-globulus-ence-sld-1-1030x664.jpg');
-    height: 92vh;
-    padding: 10rem 0 0 15rem;
-    font-family: 'Inconsolata', monospace;
-    line-height: 1.5rem;
+.third__part__planta {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  height: 250vh;
+  font-family: "Jost", sans-serif;
+  background-size: cover;
+  color: #F0F8FF;
+  display: flex;
+  flex-direction: column;
 }
 
 .second__part__home section {
-    width: 50rem;
-    height: 25rem;
-    background-color: rgba(94, 208, 138, 0.7);
-    padding: 2rem;
-    color: #dcc2e4;
-}
-
-.second__part__home p {
-    font-size: 1.7rem;
-    line-height: 2.2rem;
-}
-
-.second__part__home h2 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-}
-
-.second__part__home .material-symbols-outlined {
-    font-size: 3rem;
-    color: #F0F8FF;
-    margin-top: 2rem;
-}
-
-/*------------- TERCERA PARTE HOME ------------------*/
-
-.third__part__home {
-    background-image: url('../img/PLANTA.jpg');
-    height: 110vh;
-    background-size: cover;
-    padding: 4rem 0 0 26rem;
+  width: 50rem;
+  height: 25rem;
 }
 
 .third__part__home section {
-    background-color: rgba(89, 0, 141, 0.5); 
-    width: 40rem;
-    height: 28rem;
-    font-size: 1.8rem;
-}
-
-.third__part__home h3 {
-    font-size: 2.5rem;
-}
-
-.third__part__home .material-symbols-outlined {
-    margin-right: 2rem;
-    font-size: 3rem;
-    color: #FFFAFA;
-}
-
-/*------------- CUARTA PARTE HOME ------------------------*/
-
-.quarter__part__home {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/sustentables.jpg');
-    height: 106vh;
-    background-size: cover;
-    color: #F0FFF0;
-    padding: 11rem 0 0 15rem;
-    font-family: 'Inconsolata', monospace;
+  width: 40rem;
+  height: 28rem;
 }
 
 .quarter__part__home section {
-    width: 35rem;
-    height: 25rem;
-}
-
-.quarter__part__home .material-symbols-outlined {
-    margin-right: 2rem;
-    font-size: 3rem;
-    color: #F0F8FF;
-}
-
-/*------------  QUINTA PARTE HOME ------------*/
-
-
-.fifth__part__home {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/COMUNIDADD.jpg');
-    height: 90vh;
-    color: #F0FFF0;
+  width: 35rem;
+  height: 23rem;
 }
 
 .fifth__part__home section {
-    background-color: rgba(108, 0, 255, 0.6);
-    width: 42rem;
-    height: 38rem;
-    clip-path: polygon(30% 0%, 50% 15%, 70% 0%, 90% 10%, 91% 30.5%, 80% 70%, 50% 100%, 20% 70%, 8.2% 33.5%, 10% 10%);
-    padding: 4rem 0 0 0 ;
-    text-align: center;
-    transform: translate(28rem, 2rem);
-    font-family: 'Inconsolata', monospace;
-    
+  width: 42rem;
+  height: 38rem;
 }
 
-.fifth__part__home .material-symbols-outlined {
-    font-size: 3rem;
+.second__part__biomasa1 {
+  width: 18rem;
+  height: 30rem;
 }
 
-/*-------------- PIE DE PAGINA  ------------------*/
+.second__part__biomasa2 {
+  width: 22rem;
+  height: 33rem;
+}
 
 .footer__page {
-        font-family: 'Inconsolata', monospace;
-        background: rgb(46,185,181);
-        background: linear-gradient(90deg, rgba(46,185,181,0.7652310924369747) 72%, rgba(131,58,180,1) 100%, rgba(253,35,31,1) 100%, rgba(253,39,32,1) 100%, rgba(252,176,69,1) 100%, rgba(253,213,29,1) 100%);
-        height: 120vh;
-        font-size: 1.5rem;
-    }
+  font-family: "Inconsolata", monospace;
+  background: linear-gradient(90deg, rgba(46, 185, 181, 0.7652310924) 72%, rgb(131, 58, 180) 100%, rgb(253, 35, 31) 100%, rgb(253, 39, 32) 100%, rgb(252, 176, 69) 100%, rgb(253, 213, 29) 100%);
+  height: 120vh;
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 395px) {
+  .footer__page {
+    font-size: 0.8rem;
+    height: 72vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__page {
+    font-size: 1.2rem;
+  }
+}
 
 footer {
-    margin-top: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 textarea {
-    resize: none;
+  resize: none;
+}
+@media screen and (max-width: 395px) {
+  textarea {
+    width: 12.6rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  textarea {
+    width: 12.6rem;
+  }
 }
 
 button {
-    margin-top: 30px;
-    position: relative;
-    padding: 10px 15px;
-    border: none;
-    outline: none;
-    background: #350642;
-    color: #dcc2e4;
-    cursor: pointer;
-    transition: .5s;
-    overflow: hidden;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border-radius: 5px;
+  margin-top: 30px;
+  position: relative;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  background: #350642;
+  color: #dcc2e4;
+  cursor: pointer;
+  transition: 0.5s;
+  overflow: hidden;
+  font-family: "Inconsolata", monospace;
+  border-radius: 5px;
+}
+@media screen and (max-width: 395px) {
+  button {
+    margin: 0;
+  }
 }
 
 button:hover {
-    color: #fff;
+  color: #fff;
 }
 
 button b {
-    position: absolute;
-    background: #fff;
-    transition: .5s;
+  position: absolute;
+  background: #fff;
+  transition: 0.5s;
 }
 
 button b:nth-child(1) {
-    width: 100%;
-    height: 1px;
-    top: 0;
-    left: -100%;
+  width: 100%;
+  height: 1px;
+  top: 0;
+  left: -100%;
 }
 
 button b:nth-child(2) {
-    width: 100%;
-    height: 1px;
-    bottom: 0;
-    right: -100%;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  right: -100%;
 }
 
 button b:nth-child(3) {
-    width: 1px;
-    height: 100%;
-    bottom: -100%;
-    left: 0;
+  width: 1px;
+  height: 100%;
+  bottom: -100%;
+  left: 0;
 }
 
 button b:nth-child(4) {
-    width: 1px;
-    height: 100%;
-    top: -100%;
-    right: 0;
+  width: 1px;
+  height: 100%;
+  top: -100%;
+  right: 0;
 }
 
 button:hover b:nth-child(1) {
-    left: 0;
+  left: 0;
 }
 
 button:hover b:nth-child(2) {
-    right: 0;
+  right: 0;
 }
 
 button:hover b:nth-child(3) {
-    bottom: 0;
+  bottom: 0;
 }
 
 button:hover b:nth-child(4) {
-    top: 0;
+  top: 0;
 }
 
-
-/*---------------------- PRIMERA PARTE BIOMASA -----------------*/
-
-.front__page__biomasa {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/portadaBiomasa.jpg');
-    height: 90vh;
-    font-family: 'Jost', sans-serif;
-    background-size: cover;
-    color: #F0F8FF;
+@media screen and (max-width: 395px) {
+  .marca {
+    margin-top: 5rem;
+  }
 }
 
-.what__is__biomass {
+.bind {
+  text-decoration: none;
+  color: #F0F8FF;
+  background-image: linear-gradient(white, white);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.3s;
+  margin-left: 2rem;
+}
+
+.bind:hover, a:focus {
+  background-size: 100% 2px;
+}
+
+/*----------------- PRIMERA PARTE HOME --------------*/
+@media screen and (max-width: 395px) {
+  body {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 578px) {
+  body {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+}
+
+.front__page__home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/encabezado.jpg");
+  height: 139vh;
+  font-family: "Jost", sans-serif;
+  background-size: cover;
+}
+@media screen and (max-width: 395px) {
+  .front__page__home {
+    height: 136vh;
+  }
+}
+@media screen and (max-width: 578px) {
+  .front__page__home {
+    height: 136vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  .front__page__home {
+    height: 136vh;
+  }
+}
+
+.front__page__home a img {
+  border-radius: 50px;
+}
+
+.front__page__home ul {
+  list-style: none;
+}
+
+.front__page__home nav {
+  padding: 1.5rem;
+}
+
+@media screen and (max-width: 395px) {
+  .links__home {
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
     justify-content: center;
-}
-
-.what__is__biomass a {
-    transform: translate(-40rem, 20rem);
-}
-
-
-/*----------------- SEGUNDA PARTE BIOMASA -------------------*/
-
-.second__part__biomasa {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    height: 100vh;
-    font-family: 'Dosis', sans-serif;
-    justify-items: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.1); 
+  }
+}
+@media screen and (max-width: 578px) {
+  .links__home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 395px) {
+  .links__home span {
+    display: none;
+  }
+}
+
+.ciclo__virtuosoo {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.ciclo__virtuosoo span {
+  border: 3px outset #F0F8FF;
+  border-radius: 50%;
+  text-align: center;
+}
+@media screen and (max-width: 395px) {
+  .ciclo__virtuosoo span {
+    border: 0;
+  }
+}
+
+/*------------------------ SEGUNDA PARTE HOME ----------------------*/
+.second__part__home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/eucalipto-globulus-ence-sld-1-1030x664.jpg");
+  padding: 10rem 0 0 15rem;
+  font-family: "Inconsolata" monospace;
+  height: 92vh;
+  line-height: 1.5rem;
+}
+@media screen and (max-width: 395px) {
+  .second__part__home {
+    padding: 3rem 0 0 2rem;
+    background-size: cover;
+    height: 100vh;
+  }
+}
+@media screen and (max-width: 578px) {
+  .second__part__home {
+    padding: 3rem 0 0 2rem;
+    background-size: cover;
+    height: 105vh;
+  }
+}
+@media screen and (max-width: 1130px) {
+  .second__part__home {
+    padding: 6rem 0 0 6rem;
+    background-size: cover;
+    height: 95vh;
+  }
+}
+.second__part__home section {
+  background-color: rgba(94, 208, 138, 0.7);
+  padding: 2rem;
+  color: #dcc2e4;
+}
+@media screen and (max-width: 395px) {
+  .second__part__home section {
+    width: 20rem;
+    height: 40rem;
+    padding: 2rem;
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .second__part__home section {
+    width: 30rem;
+    height: 33rem;
+    font-size: 1.6rem;
+  }
+}
+.second__part__home section p {
+  font-size: 1.7rem;
+  line-height: 2.2rem;
+}
+.second__part__home section h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .second__part__home section h2 {
+    text-align: center;
+  }
+}
+/*--------------------- TERCERA PARTE HOME ---------------------*/
+.third__part__home {
+  background-image: url("../img/PLANTA.jpg");
+  height: 110vh;
+  background-size: cover;
+  padding: 4rem 0 0 26rem;
+}
+@media screen and (max-width: 395px) {
+  .third__part__home {
+    background-size: cover;
+    padding: 3rem 0 0 1rem;
+    height: 80vh;
+  }
+}
+@media screen and (max-width: 1130px) {
+  .third__part__home {
+    padding: 3rem 0 0 14rem;
+    background-size: cover;
+    height: 80vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  .third__part__home {
+    font-size: 1.6rem;
+    padding: 3.5rem 0 0 2rem;
+  }
+}
+.third__part__home section {
+  background-color: rgba(89, 0, 141, 0.5);
+  font-size: 1.8rem;
+}
+@media screen and (max-width: 395px) {
+  .third__part__home section {
+    width: 21rem;
+    height: 37rem;
+    font-size: 1.4rem;
+  }
+}
+.third__part__home section h3 {
+  font-size: 2.5rem;
+}
+.third__part__home section .material-symbols-outlined {
+  margin-right: 2rem;
+}
+
+/*------------------- CUARTA PARTE HOME --------------------*/
+.quarter__part__home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/sustentables.jpg");
+  height: 106vh;
+  background-size: cover;
+  color: #F0FFF0;
+  padding: 11rem 0 0 15rem;
+  font-family: "Garamond";
+}
+@media screen and (max-width: 395px) {
+  .quarter__part__home {
+    background-size: cover;
+    padding: 3rem 0 0 3rem;
+    height: 80vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  .quarter__part__home {
+    padding: 4rem 0 0 4rem;
+    height: 75vh;
+  }
+}
+@media screen and (max-width: 395px) {
+  .quarter__part__home section {
+    width: 18rem;
+    height: 30rem;
+  }
+}
+
+.material-symbols-outlined {
+  margin-right: 2rem;
+}
+@media screen and (max-width: 395px) {
+  .material-symbols-outlined {
+    margin-top: 2rem;
+  }
+}
+
+/*-------------------- QUINTA PARTE HOME --------------------*/
+.fifth__part__home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/COMUNIDADD.jpg");
+  height: 95vh;
+  background-size: cover;
+  color: #F0FFF0;
+  padding: 0;
+  font-family: "Garamond";
+}
+@media screen and (max-width: 395px) {
+  .fifth__part__home {
+    background-size: cover;
+    height: 83vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  .fifth__part__home {
+    height: 95vh;
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 1130px) {
+  .fifth__part__home {
+    padding: 3rem 0 0 0;
+    background-size: cover;
+    height: 100vh;
+  }
+}
+.fifth__part__home section {
+  background-color: rgba(108, 0, 255, 0.6);
+  clip-path: polygon(30% 0%, 50% 15%, 70% 0%, 90% 10%, 91% 30.5%, 80% 70%, 50% 100%, 20% 70%, 8.2% 33.5%, 10% 10%);
+  padding: 4rem 0 0 0;
+  text-align: center;
+  transform: translate(28rem, 2rem);
+  font-family: "Karla";
+}
+@media screen and (max-width: 395px) {
+  .fifth__part__home section {
+    width: 18rem;
+    height: 20rem;
+    padding: 1rem;
+    clip-path: none;
+  }
+}
+@media screen and (max-width: 578px) {
+  .fifth__part__home section {
+    width: 18rem;
+    height: 40rem;
+    transform: translate(2rem, 2rem);
+    padding: 1rem;
+    clip-path: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .fifth__part__home section {
+    width: 30rem;
+    font-size: 1.8rem;
+    clip-path: none;
+  }
+}
+@media screen and (max-width: 1130px) {
+  .fifth__part__home section {
+    padding: 3rem 0 0 2rem;
+    background-size: cover;
+    height: 85vh;
+    transform: translate(12rem, 2rem);
+  }
+}
+
+/*---------------------- PRIMERA PARTE BIOMASA ----------------------*/
+.front__page__biomasa {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/portadaBiomasa.jpg");
+  height: 90vh;
+  background-size: cover;
+  color: #F0F8FF;
+  padding: 0;
+  font-family: "Jost";
+}
+@media screen and (max-width: 768px) {
+  .front__page__biomasa {
+    height: 100vh;
+    background-size: cover;
+  }
+}
+.front__page__biomasa .what__is__biomass {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .front__page__biomasa .what__is__biomass {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
+}
+.front__page__biomasa .what__is__biomass a {
+  transform: translate(-40rem, 20rem);
+}
+@media screen and (max-width: 768px) {
+  .front__page__biomasa .what__is__biomass a {
+    transform: translate(0, 0);
+  }
+}
+
+/*---------------------- SEGUNDA PARTE BIOMASA --------------------*/
+.second__part__biomasa {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100vh;
+  font-family: "Dosis";
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .second__part__biomasa {
+    height: 220vh;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 30rem);
+    justify-items: center;
+    font-size: 10px;
+  }
 }
 
 .second__part__biomasa1 {
-    background-color: rgba(0, 138, 8, 0.7); ;
-    width: 18rem;
-    height: 30rem;
-    font-size: 18px;
-    padding: 2rem;
+  background-color: rgba(0, 138, 8, 0.7);
+  width: 18rem;
+  height: 30rem;
+  font-size: 18px;
+  padding: 2rem;
+  margin-left: 2rem;
 }
-
+@media screen and (max-width: 768px) {
+  .second__part__biomasa1 {
+    margin-left: 2rem;
+    font-size: 24px;
+    height: 30rem;
+    width: 30rem;
+    margin-top: 7rem;
+  }
+}
 .second__part__biomasa1 h2 {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 .second__part__biomasa2 {
-    width: 22rem;
-    height: 33rem;
-    font-size: 20px;
-    padding: 2rem; 
-    background-color: rgba(0, 0, 0, 0.2); 
+  font-size: 20px;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.2);
 }
-
+@media screen and (max-width: 768px) {
+  .second__part__biomasa2 {
+    font-size: 24px;
+    width: 30rem;
+    height: 29rem;
+  }
+}
 .second__part__biomasa2 b {
-    font-weight: bold;
-    font-size: 2.5rem;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+@media screen and (max-width: 768px) {
+  .second__part__biomasa2 b {
+    display: grid;
+    justify-content: center;
+  }
 }
 
-/*------------------- TERCERA PARTE BIOMASA -------------------*/
-
+/*----------------------- TERCERA PARTE BIOMASA ---------------------*/
 .third__part__biomasa {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/APILADAS.jpg');
-    height: 100vh;
-    background-size: cover;
-    color: #F0FFF0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/APILADAS.jpg");
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100vh;
+  font-family: 0;
+  align-items: 0;
+  color: #F0FFF0;
+  background-size: cover;
+}
+@media screen and (max-width: 768px) {
+  .third__part__biomasa {
+    height: 240vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .images__biomasa {
-    display: grid;
-    grid-template-columns: repeat(6, 5rem);
-    align-content: center;
-    justify-content: space-evenly;
-    align-items: start;
-    font-family: 'Dosis', sans-serif;
-    
+  display: grid;
+  grid-template-columns: repeat(6, 5rem);
+  height: 0;
+  font-family: "Dosis";
+  align-items: start;
+  align-content: center;
+  justify-content: space-evenly;
+  position: relative;
+  left: 40rem;
+  top: -20rem;
 }
-
+@media screen and (max-width: 768px) {
+  .images__biomasa {
+    display: grid;
+    grid-template-columns: repeat(3, 5rem);
+    gap: 10rem;
+    position: none;
+    left: 0;
+    justify-content: end;
+    top: 0;
+    margin-right: 5rem;
+    padding-left: 5rem;
+    font-size: 1.7rem;
+    margin-bottom: 16rem;
+  }
+}
 .images__biomasa span {
-    line-height: 3rem;
-}
-
-.images__biomasa {
-    position: relative;
-    left: 40rem;
-    top: -20rem;
+  line-height: 3rem;
 }
 
 .third__part__biomasa1 {
-    background-color: rgba(255, 255, 255, 0.5);
-    width: 28rem;
-    height: 38rem;
-    font-family: 'Dosis', sans-serif;
-    padding: 2rem 0 0 4rem;
-    color: rgba(0,0,0,0.76);
-    margin: 3em 0 0 5em;
-    font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 28rem;
+  height: 38rem;
+  font-family: "Dosis";
+  padding: 2rem 0 0 4rem;
+  color: rgba(0, 0, 0, 0.76);
+  margin: 3em 0 0 5em;
+  font-size: 1.5rem;
 }
-
+@media screen and (max-width: 768px) {
+  .third__part__biomasa1 {
+    font-size: 1.8rem;
+    height: 45rem;
+    margin: 3rem 0 0 2rem;
+  }
+}
 .third__part__biomasa1 h3 {
-    font-weight: bold;
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+@media screen and (max-width: 768px) {
+  .third__part__biomasa1 h3 {
+    font-size: 3.5rem;
+  }
 }
 
-.third__part__biomasa .formatos {
-    font-size: 26px;
-    width: 22rem;
-    height: 10rem;
-    padding: 2rem;
-    background-color: rgba(0,0,92,0.56);
-    font-family: 'Dosis', sans-serif;
-    text-align: center;
-    margin-top: 8rem;
-    position: relative;
-    left: 6rem;
+.formatos {
+  font-size: 26px;
+  width: 22rem;
+  height: 10rem;
+  padding: 2rem;
+  background-color: rgba(0, 0, 92, 0.56);
+  font-family: "Dosis";
+  text-align: center;
+  margin-top: 6rem;
+  position: relative;
+  left: 6rem;
+}
+@media screen and (max-width: 768px) {
+  .formatos {
+    width: 20rem;
+    padding: 1rem;
+    height: 9rem;
+    position: none;
+    left: 0;
+    top: -10rem;
+    margin-top: 1rem;
+    font-size: 1.2em;
+    font-size: 1.6rem;
+  }
 }
 
+/*-------------------- CUARTA PARTE BIOMASA --------------------------*/
 .quarter__part__biomasa {
-    height: 90vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.3)), url('../img/ALAMCENAMIENTO.jpg');
-    background-size: cover;
-    font-family: 'Dosis', sans-serif;
-    display: flex;
-    justify-content: center;
+  display: flex;
+  grid-template-columns: 0;
+  height: 90vh;
+  font-family: "Dosis";
+  align-items: 0;
+  justify-content: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.3)), url("../img/ALAMCENAMIENTO.jpg");
+  background-size: cover;
 }
-
 .quarter__part__biomasa section {
-    background-color: rgba(255,148,54,0.66);
-    width: 28rem;
-    height: 33rem;
-    padding: 2rem 0 0 0;
-    text-align: center;
-    margin-top: 3rem;
-    
+  background-color: rgba(255, 148, 54, 0.66);
+  width: 28rem;
+  height: 33rem;
+  padding: 2rem 0 0 0;
+  text-align: center;
+  margin-top: 3rem;
+}
+@media screen and (max-width: 768px) {
+  .quarter__part__biomasa section {
+    width: 40rem;
+    font-size: 2rem;
+  }
+}
+.quarter__part__biomasa section h4 {
+  font-size: 48px;
+  margin-bottom: 1.5rem;
+}
+.quarter__part__biomasa section h4 p {
+  font-size: 26px;
 }
 
-.quarter__part__biomasa h4 {
-    font-size: 48px;
-    margin-bottom: 1.5rem;
-}
-
-.quarter__part__biomasa p {
-    font-size: 26px;
-}
-
-
-/*---------------- PRIMERA PARTE PLANTA -------------------*/
-
-
+/*--------------------- PRIMERA PARTE PLANTA ------------------------*/
 .front__page__planta {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/LAPLANTA.jpg');
-    height: 90vh;
-    font-family: 'Jost', sans-serif;
-    background-size: cover;
-    color: #F0F8FF;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/LAPLANTA.jpg");
+  height: 90vh;
+  background-size: cover;
+  color: #F0FFF0;
+  padding: 0;
+  font-family: "Jost", sans-serif;
+}
+@media screen and (max-width: 395px) {
+  .front__page__planta {
+    width: 100%;
+    height: 100vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  .front__page__planta {
+    height: 110vh;
+    width: 100%;
+  }
 }
 
 .how__the__plant__works {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-bottom: 8rem;
+}
+@media screen and (max-width: 395px) {
+  .how__the__plant__works {
     display: flex;
-    align-items: baseline;
+    justify-content: none;
+    margin-left: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .how__the__plant__works {
+    display: flex;
+    justify-content: start;
+    margin-left: 5rem;
+    font-size: 1.6rem;
+  }
+}
+.how__the__plant__works a {
+  transform: translate(-40rem, 2rem);
+}
+@media screen and (max-width: 395px) {
+  .how__the__plant__works a {
+    display: flex;
     justify-content: center;
-    margin-bottom: 8rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .how__the__plant__works a {
+    transform: translate(-20rem, 8rem);
+  }
 }
 
-.how__the__plant__works a {
-    transform: translate(-40rem, 2rem);
-}
 .data__planta {
-    background-color: rgba(40,0,92,0.56);
-    
+  background-color: rgba(40, 0, 92, 0.56);
+}
+@media screen and (max-width: 768px) {
+  .data__planta {
+    display: none;
+  }
 }
 
 .data__planta1 {
-    display: grid;
-    grid-template-columns: repeat(4, 10rem);
-    gap: 5rem;
-    justify-content: center;
-    color: #F0F8FF;
-    padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 10rem);
+  gap: 5rem;
+  justify-content: center;
+  color: #F0FFF0;
+  padding: 2rem;
 }
 
 .data__planta2 {
-    display: grid;
-    grid-template-columns: repeat(4, 10rem);
-    gap: 5rem;
-    justify-content: center;
-    padding-bottom: 1.4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 10rem);
+  gap: 5rem;
+  justify-content: center;
+  padding-bottom: 1.4rem;
 }
 
-
-/*----------------- SEGUNDA PARTE PLANTA ---------*/
-
-
+/*--------------------------- SEGUNDA PARTE PLANTA -------------*/
 .second__part__planta {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/Ubicacionplanta.jpg');
-    height: 100vh;
-    font-family: 'Jost', sans-serif;
-    background-size: cover;
-    color: #F0F8FF;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/Ubicacionplanta.jpg");
+  height: 100vh;
+  background-size: cover;
+  color: #F0FFF0;
+  padding: 0;
+  font-family: "Jost", sans-serif;
 }
-
+@media screen and (max-width: 768px) {
+  .second__part__planta {
+    height: 120vh;
+  }
+}
 .second__part__planta section {
-    display: grid;
-    grid-template-columns: repeat(2, 22rem);
-    justify-content: center;
-    padding-top: 2rem;
-    
-    
+  display: grid;
+  grid-template-columns: repeat(2, 22rem);
+  height: none;
+  font-family: 0;
+  align-items: 0;
+  justify-content: center;
+  padding-top: 2rem;
 }
-
-.second__part__planta div {
-    padding: 2rem;
-    color: black;
-    background-color: rgba(255, 255, 255, 0.5);
+@media screen and (max-width: 768px) {
+  .second__part__planta section {
+    font-size: 1.6rem;
+    padding-top: 4rem;
+    margin-left: 12rem;
+  }
 }
-
+@media screen and (max-width: 395px) {
+  .second__part__planta section {
+    margin-left: 2rem;
+  }
+}
+.second__part__planta section div {
+  padding: 2rem;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+@media screen and (max-width: 768px) {
+  .second__part__planta section div {
+    font-size: 1.2rem;
+    width: 23rem;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .second__part__planta section div h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+  }
+}
 
 /*--------------------- TERCERA PARTE PLANTA -----------------*/
-
-
-.third__part__planta {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    height: 250vh;
-    font-family: 'Jost', sans-serif;
-    background-size: cover;
-    color: #F0F8FF;
-    display: flex;
-    
-    flex-direction: column;
+@media screen and (max-width: 395px) {
+  .third__part__planta {
+    height: 700vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  .third__part__planta {
+    height: 400vh;
+  }
 }
 
 .ciclos__produc {
+  display: grid;
+  grid-template-columns: repeat(3, 15rem);
+  grid-template-rows: repeat(3, 20rem);
+  gap: 10rem;
+  justify-content: center;
+  font-family: "Cambria";
+  flex-direction: 0;
+  text-align: center;
+}
+@media screen and (max-width: 395px) {
+  .ciclos__produc {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .ciclos__produc {
+    font-size: 1rem;
     display: grid;
-    grid-template-columns: repeat(3, 15rem);
-    grid-template-rows: repeat(3, 20rem);
-    gap: 10rem;
-    justify-content: center;
-    text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    grid-template-columns: repeat(2, 8rem);
+    grid-template-rows: repeat(2, 30rem);
+    gap: 14rem;
+    justify-content: start;
+    margin-left: 8rem;
+  }
+}
+.ciclos__produc img {
+  border-radius: 10%;
 }
 
 .ciclo__produccion__planta {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  grid-template-columns: 0;
+  grid-template-rows: 0;
+  gap: 0;
+  justify-content: center;
+  font-family: "Gill Sans";
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 4rem;
+  background-color: rgba(0, 0, 255, 0.6);
+  font-size: 2rem;
+}
+@media screen and (max-width: 395px) {
+  .ciclo__produccion__planta {
+    display: grid;
+    gap: 5rem;
+    justify-content: start;
+    width: 100%;
+    padding: 0;
+    justify-items: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .ciclo__produccion__planta {
+    width: 50rem;
+    padding: 2rem;
+  }
+}
+@media screen and (max-width: 395px) {
+  .ciclo__produccion__planta h3 {
+    width: 5rem;
+    margin-left: 6rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .ciclo__produccion__planta h3 {
+    width: 15rem;
+    margin-left: 15rem;
+  }
+}
+@media screen and (max-width: 395px) {
+  .ciclo__produccion__planta p {
     text-align: center;
-    margin-bottom: 2rem;
-    justify-content: center;
-    padding: 4rem;
-    background-color: rgba(0, 0, 255, 0.6);
-    font-size: 2rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 4rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .ciclo__produccion__planta p {
+    width: 20rem;
+    margin-left: 12rem;
+  }
 }
 
 .orden {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10%;
-    padding: .5rem;
-    margin: 1rem 0 1rem 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10%;
+  padding: 0.5rem;
+  margin: 1rem 0 1rem 0;
 }
 
 .text__ciclo {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .titulo {
-    color: #000;
+  color: #000;
+  margin-bottom: 1rem;
 }
-
-.ciclos__produc div img {
-    border-radius: 10%;
-}
-
 
 /*---------------------- PRIMERA PARTE ENERGIA ---------------*/
-
-
 .front__page__energia {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/ENERGIAportada.jpg');
-    height: 90vh;
-    font-family: 'Jost', sans-serif;
-    background-size: cover;
-    color: #F0F8FF;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/ENERGIAportada.jpg");
+  height: 90vh;
+  background-size: cover;
+  color: #F0FFF0;
+  padding: 0;
+  font-family: "Jost", sans-serif;
+}
+@media screen and (max-width: 395px) {
+  .front__page__energia {
+    height: 100vh;
+  }
 }
 
 .clean__energy {
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    margin-bottom: 8rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-bottom: 8rem;
 }
-
+@media screen and (max-width: 395px) {
+  .clean__energy {
+    margin-left: 3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .clean__energy {
+    margin-left: 0;
+  }
+}
 .clean__energy a {
-    transform: translate(-40rem, 20rem);
+  transform: translate(-40rem, 20rem);
+}
+@media screen and (max-width: 395px) {
+  .clean__energy a {
+    transform: translate(-12rem, 13rem);
+  }
+}
+@media screen and (max-width: 768px) {
+  .clean__energy a {
+    transform: translate(-25rem, 15rem);
+  }
 }
 
-/*------------------- SEGUNDA PARTE ENERGIA ------------------*/
+/*--------------------------- SEGUNDA PARTE ENERGIA ----------------*/
 .second__part__energia {
-    background: linear-gradient(90deg, rgba(46,112,185,0.7652310924369747) 32%, rgba(30,176,187,1) 47%, rgba(131,58,180,1) 100%, rgba(253,35,31,1) 100%, rgba(253,39,32,1) 100%, rgba(252,176,69,1) 100%);
-    height: 100vh;
-    font-family: 'Jost', sans-serif;
-    background-size: cover;
-    color: #F0F8FF;
+  height: 100vh;
+  background-size: cover;
+  color: #F0FFF0;
+  padding: 0;
+  font-family: "Jost", sans-serif;
+  background: linear-gradient(90deg, rgba(46, 112, 185, 0.7652310924) 32%, rgb(30, 176, 187) 47%, rgb(131, 58, 180) 100%, rgb(253, 35, 31) 100%, rgb(253, 39, 32) 100%, rgb(252, 176, 69) 100%);
+  display: flex;
+}
+@media screen and (max-width: 395px) {
+  .second__part__energia {
+    height: 200vh;
     display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 768px) {
+  .second__part__energia {
+    height: 150vh;
+  }
 }
 
 .energia__limpia {
+  display: flex;
+  grid-template-columns: 0;
+  grid-template-rows: 0;
+  gap: 3rem;
+  justify-content: 0;
+  font-family: "Times New Roman";
+  flex-direction: column;
+  margin: 4rem 0 0 2rem;
+}
+@media screen and (max-width: 395px) {
+  .energia__limpia {
     display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    margin: 4rem 0 0 2rem;
-    font-family: 'Times New Roman', Times, serif;
-    
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: start;
+    margin: 0;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .energia__limpia {
+    margin: 4rem 0 0 1rem;
+    padding: 2rem;
+  }
+}
+.energia__limpia section {
+  text-align: center;
+}
+.energia__limpia p {
+  text-align: center;
+  padding-top: 2rem;
+  font-size: 1.2rem;
 }
 
 .titulo__second {
-    background-color: rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 6rem 6rem 0 6rem ;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 6rem 6rem 0 6rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-
-.energia__limpia section p {
-    text-align: center;
-    padding-top: 2rem;
-    font-size: 1.2rem;
-}
-
-
-/*-------------------- TERCERA PARTE ENERGIA ----------------*/
-
-.third__part__energia {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/FOCO.jpg');
-    height: 110vh;
-    font-family: 'Jost', sans-serif;
-    background-size: cover;
-    color: #F0F8FF;
+@media screen and (max-width: 395px) {
+  .titulo__second {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    padding: 2rem 0 7rem 0;
     justify-content: center;
-    padding-top: 8rem;
+    background-color: rgba(36, 36, 200, 0.2);
+    height: 22rem;
+  }
+}
+
+/*--------------------........... TERCERA PARTE ENERGIA .............----------------*/
+.third__part__energia {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/FOCO.jpg");
+  height: 110vh;
+  background-size: cover;
+  color: #F0FFF0;
+  padding: 8rem;
+  font-family: "Jost", sans-serif;
+  display: flex;
+  justify-content: center;
 }
 
 .third__part {
-    background-color: rgba(200,35,31,.4);
-    height: 32rem;
-    padding: 5rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-align: center;
+  background-color: rgba(200, 35, 31, 0.4);
+  height: 36rem;
+  padding: 5rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+@media screen and (max-width: 395px) {
+  .third__part {
+    height: 30rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .third__part {
+    height: 30rem;
+  }
+}
+.third__part h3 {
+  font-size: 40px;
+}
+@media screen and (max-width: 395px) {
+  .third__part h3 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .third__part h3 {
+    font-size: 2rem;
+  }
+}
+.third__part p {
+  font-size: 34px;
+}
+@media screen and (max-width: 395px) {
+  .third__part p {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .third__part p {
+    font-size: 1.8rem;
+  }
 }
 
-
-/*-------------------- PRIMERA PARTE COMUNIDAD --------------*/
-
-
+/*-------------------- ------ PRIMERA PARTE COMUNIDAD ------------------*/
 .front__page__comunidad {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('../img/comunidad.jpg');
-    height: 90vh;
-    font-family: 'Jost', sans-serif;
-    background-size: cover;
-    color: #F0F8FF;
+  height: 90vh;
+  background-size: cover;
+  color: #F0FFF0;
+  padding: 0;
+  font-family: "Jost", sans-serif;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url("../img/comunidad.jpg");
+}
+@media screen and (max-width: 395px) {
+  .front__page__comunidad {
+    height: 75vh;
+  }
 }
 
 .community__engagement {
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    margin-bottom: 8rem;
-    text-align: center;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-bottom: 8rem;
+  text-align: center;
 }
-
+@media screen and (max-width: 395px) {
+  .community__engagement h1 {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .community__engagement h1 {
+    font-size: 2.6rem;
+  }
+}
 .community__engagement a {
-    transform: translate(-40rem, 20rem);
+  transform: translate(-40rem, 20rem);
+}
+@media screen and (max-width: 395px) {
+  .community__engagement a {
+    transform: translate(-10rem, 10rem);
+  }
+}
+@media screen and (max-width: 768px) {
+  .community__engagement a {
+    transform: translate(-13rem, 20rem);
+  }
 }
 
 .data__comunidad {
-    display: grid;
-    grid-template-columns: repeat(2, 30rem);
-    justify-content: center;
-    gap: 2rem;
-    text-align: center;
-    padding: 2rem;
-    background-color: rgba(46,185,181,0.4);
-    font-family: fantasy;
+  display: grid;
+  grid-template-columns: repeat(2, 30rem);
+  grid-template-rows: 0;
+  gap: 4rem;
+  justify-content: center;
+  font-family: fantasy;
+  flex-direction: 0;
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(46, 185, 181, 0.4);
 }
-
-
-/*------------------ SEGUNDA PARTE COMUNIDAD --------------*/
-
-.second__part__comunidad {
-    background: radial-gradient(circle, rgba(109,85,132,1) 23%, rgba(34,62,94,1) 100%);
-    height: 100vh;
-    font-family: 'Jost', sans-serif;
-    background-size: cover;
-    color: #F0F8FF;
+@media screen and (max-width: 395px) {
+  .data__comunidad {
     display: flex;
-    gap: 5rem;
-    
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .data__comunidad {
+    display: grid;
+    grid-template-columns: repeat(2, 20rem);
+  }
 }
 
+/*----------------------------- SEGUNDA PARTE COMUNIDAD --------------------------------*/
+.second__part__comunidad {
+  display: flex;
+  grid-template-columns: 0;
+  grid-template-rows: 0;
+  gap: 5rem;
+  justify-content: 0;
+  font-family: "Jost", sans-serif;
+  flex-direction: 0;
+  background: radial-gradient(circle, rgb(109, 85, 132) 23%, rgb(34, 62, 94) 100%);
+  height: 100vh;
+  background-size: cover;
+  color: #F0F8FF;
+}
+@media screen and (max-width: 395px) {
+  .second__part__comunidad {
+    height: 200vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .second__part__comunidad {
+    height: 240vh;
+  }
+}
 .second__part__comunidad section {
-    background: radial-gradient(circle, rgba(120,102,78,1) 30%, rgba(34,62,94,1) 100%);
-    padding: 6rem 6rem 0 6rem ;
-    text-align: center;
+  background: radial-gradient(circle, rgb(120, 102, 78) 30%, rgb(34, 62, 94) 100%);
+  padding: 6rem 6rem 0 6rem;
+  text-align: center;
+}
+@media screen and (max-width: 395px) {
+  .second__part__comunidad section {
+    padding: 3rem 3rem 3rem 3rem;
+  }
+}
+.second__part__comunidad section h2 {
+  margin-top: 39rem;
 }
 
 .puntos__comunidad {
-    padding-top: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    font-size: 1.2rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1.2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*----------- MEDIA QUERY --------------------*/
-
 @media screen and (max-width: 395px) {
-    body {
-        width: 100%;
-        
-    }
-
-    .front__page__home {
-        height: 136vh;
-    }
-
-    .links__home {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-    }
-
-    .links__home span {
-        display: none;
-    }
-
-    
-
-    .ciclo__virtuosoo span {
-        border: 0;
-    }
-
-/*--------- SEGUNDA PARTE HOME -----------*/
-
-
-    .second__part__home {
-        padding: 3rem 0 0 2rem;
-        background-size: cover;
-        height: 105vh;
-
-    }
-
-    .second__part__home section{
-        width: 19rem;
-        height: 48rem;
-        padding: 2rem;
-        
-    }
-
-
-/*---------------- TERCERA PARTE HOME --------------*/
-
-
-    .third__part__home {
-        background-size: cover;
-        padding: 3rem 0 0 2rem;
-        height: 80vh;
-        
-    }
-
-    .third__part__home section {
-        width: 19rem;
-        height: 35rem;
-        font-size: 1.2rem;
-        
-    }
-    
-
-    /*------------- CUARTA PARTE HOME -----------------*/
-
-
-    .quarter__part__home {
-        background-size: cover;
-        padding: 3rem 0 0 3rem;
-        height: 80vh;
-    }
-
-    .quarter__part__home section {
-        width: 18rem;
-        height: 38rem;
-    }
-
-    .quarter__part__home .material-symbols-outlined {
-        margin-top: 2rem;
-    }
-
-
-    /*-----------------  QUINTA PARTE HOME ------------------*/
-
-
-    .fifth__part__home {
-        background-size: cover;
-        
-        height: 83vh;
-    }
-
-    .fifth__part__home section {
-        width: 18rem;
-        height: 40rem;
-        transform: translate(2rem, 2rem);
-        padding: 1rem;
-        clip-path: none;
-    }
-
-    .fifth__part__home .material-symbols-outlined {
-        display: grid;
-        justify-content: end;
-    }
-
-
-    /*----------------------- PIE DE PAGINA ---------------------*/
-
-    .footer__page {
-        font-size: .8rem;
-        height: 72vh;
-    }
-    textarea {
-        width: 12.6rem;
-    }
-
-    footer {
-        margin-top: 1.5rem;
-        
-    }
-
-    button {
-        margin: 0;
-    }
-    .marca {
-        margin-top: 5rem;
-    }
-}
-
-
-/*------------------- MEDIA QUERY BIOMASA ---------------------*/
-
-
-@media screen and (max-width: 576px){
-
-/*----------------------   PRIMERA PARTE BIOMASA -------------*/    
-
-    .front__page__biomasa {
-        height: 70vh;
-        width: 100%;
-    }
-
-    .what__is__biomass {
-        
-        background-size: cover;
-        
-    }
-    .what__is__biomass {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 5rem;
-        
-    }
-    .what__is__biomass a {
-        transform: translate(0, 0);
-    }
-    
-
-/*-------------------- SEGUNDA PARTE BIOMASA -----------------*/
-
-.second__part__biomasa {
-    width: 100%;
-    height: 150vh;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    font-size: 10px;
-}
-
-.second__part__biomasa1 {
-    margin-left: 2rem;
-    font-size: 14px;
-    height: 23rem;
-}
-
-.second__part__biomasa1 h2 {
-    font-size: 24px;
-    display: flex;
-    justify-content: center;
-}
-
-.second__part__biomasa2 b {
-    font-size: 22px;
-    display: flex;
-    justify-content: center;
-}
-
-.second__part__biomasa2 {
-    font-size: 14px;
-    height: 18rem;
-    padding: 1rem;
-    margin-left: 1rem;
-}
-
-
-/*-------------------- TERCERA PARTE BIOMASA --------------------------*/
-
-.third__part__biomasa {
-    width: 100%;
-    height: 200vh;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.images__biomasa {
+  .puntos__comunidad {
     display: grid;
-    grid-template-columns: repeat(2, 5rem);
-    gap: 5rem;
-    position: relative;
-    left: 0;
-    top: 0;
-    margin-left: 3rem;
+    justify-items: center;
+    padding: 2rem;
+  }
 }
-
-.third__part__biomasa {
-    height: 175vh;
+@media screen and (max-width: 768px) {
+  .puntos__comunidad {
+    display: grid;
+    justify-items: center;
+    padding: 0.8rem;
+    padding-top: 3rem;
+  }
 }
-
-.third__part__biomasa1 {
-    width: 19rem;
-    font-size: 1rem;
-    margin-left: 2rem;
-    padding: 1rem;
+@media screen and (max-width: 395px) {
+  .puntos__comunidad p {
     text-align: center;
-    height: 25rem;
-    
+  }
+}
+@media screen and (max-width: 768px) {
+  .puntos__comunidad p {
+    text-align: center;
+  }
 }
 
-.third__part__biomasa1 h3 {
-    font-size: 2rem;
-
-}
-
-.third__part__biomasa .formatos {
-    width: 20rem;
-    padding: 1rem;
-    height: 8rem;
-    transform: translate(-5rem, -5rem);
-    font-size: 1.2em;
-    
-    
-}
-
-/*-------------------- CUARTA PARTE BIOMASA ----------------*/
-
-.quarter__part__biomasa section {
-    width: 20rem;
-    font-size: 10px;
-}
-
-}
+/*# sourceMappingURL=estilo.css.map */

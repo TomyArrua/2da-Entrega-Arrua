@@ -1,0 +1,29 @@
+%d-grid-links {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 10rem);
+    grid-template-rows: repeat(1, 6.5rem);
+    font-size: 13px;
+    color: #F0F8FF;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    align-items: center;
+}
+
+%button-outlined {
+    font-size: 3rem;
+    color: #F0F8FF;
+    margin-top: 2rem;
+}
+
+%third__part__planta {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    height: 250vh;
+    font-family: 'Jost', sans-serif;
+    background-size: cover;
+    color: #F0F8FF;
+    display: flex;
+    flex-direction: column;
+}

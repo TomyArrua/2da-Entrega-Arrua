@@ -1,0 +1,28 @@
+$segunda-parte-home: (
+    relleno:  10rem 0 0 15rem,
+    fuente: 'Inconsolata' monospace
+);
+
+$tercera-parte-home: (
+    b-image: url('../img/PLANTA.jpg'),
+    altura: 110vh,
+    b-size: cover,
+    relleno: 4rem 0 0 26rem,
+);
+
+$flex: (
+    d-flex: flex,
+    justificar: center,
+    alinear-items: baseline,
+    
+
+);
+
+/*---------------- MEDIA QUERY --------------*/
+
+$breakpoint: (
+    sx: 395px,
+    sm: 578px,
+    md: 768px,
+    lg: 1130px,
+);

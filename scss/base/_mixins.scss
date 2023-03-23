@@ -1,0 +1,35 @@
+@mixin front-page ($high, $b-cover, $color, $padding, $fuente-p) {
+    height: $high;
+    background-size: $b-cover;
+    color: $color;
+    padding: $padding;
+    font-family: $fuente-p;
+    
+}
+
+@mixin display-grid ($grid, $template-columns, $high, $fuente, $alinear) {
+    display: $grid;
+    grid-template-columns: $template-columns;
+    height: $high;
+    font-family: $fuente;
+    align-items: $alinear;
+
+}
+
+@mixin display-completo ($display, $tem-column, $tem-row, $gap, $just-center, $font, $direccion) {
+    display: $display;
+    grid-template-columns: $tem-column;
+    grid-template-rows: $tem-row;
+    gap: $gap;
+    justify-content: $just-center;
+    font-family: $font;
+    flex-direction: $direccion;
+    
+}
+
+@mixin media-up ($breakpoints) {
+    @media screen and (max-width: map-get($breakpoint, $breakpoints)) {
+        @content;
+    }
+}
+

@@ -134,6 +134,7 @@ body {
             background-color: rgba(94, 208, 138, 0.7);
             padding: 2rem;
             color: #dcc2e4;
+            width: 38rem;
 
             @include media-up(sx) {
                 width: 20rem;
@@ -158,6 +159,7 @@ body {
                 h2 {
                     font-size: 3rem;
                     margin-bottom: 2rem;
+                    text-align: center;
 
                     @include media-up(md) {
                         text-align: center;
@@ -285,6 +287,7 @@ body {
             height: 20rem;
             padding: 1rem;
             clip-path: none;
+            
         }
 
         @include media-up(sm) {
@@ -321,7 +324,7 @@ body {
 
 .front__page__biomasa {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/portadaBiomasa.jpg');
-    @include front-page(90vh, cover, #F0F8FF, 0, 'Jost');
+    @include front-page(100vh, cover, #F0F8FF, 0, 'Jost');
 
     @include media-up(md) {
         height: 100vh;
@@ -338,12 +341,38 @@ body {
             align-items: center;
             gap: 5rem;
         }
+        
         a {
-            transform: translate(-40rem, 20rem);
+            transform: translate(-40rem, 17rem);
+            
             @include media-up(md) {
                 transform: translate(0, 0);
             }
         }
+    }
+}
+
+
+.material-symbols-outlined  {
+    color: antiquewhite;
+    animation: button 1s infinite;
+    width: 3rem;
+}
+
+@keyframes button {
+    0% {
+        transform: scale(.99);
+        box-shadow: 0 0 0 0 rgba(256, 256, 256, .1);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 25px rgba(256, 256, 256, 0);
+    }
+
+    100% {
+        transform: scale(.99);
+        box-shadow: 0 0 0 0 rgba(256, 256, 256, 0);
     }
 }
 
@@ -412,7 +441,7 @@ body {
 
 .third__part__biomasa {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/APILADAS.jpg');
-    @include display-grid(grid, repeat(2, 1fr), 100vh, 0, 0);
+    @include display-grid(grid, repeat(2, 1fr), 110vh, 0, 0);
     color: $color-repet;
     background-size: $b-size;
 
@@ -507,7 +536,7 @@ body {
 /*-------------------- CUARTA PARTE BIOMASA --------------------------*/
 
 .quarter__part__biomasa {
-    @include display-grid(flex, 0, 90vh, $font-dosis, 0);
+    @include display-grid(flex, 0, 100vh, $font-dosis, 0);
     justify-content: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.3)), url('../img/ALAMCENAMIENTO.jpg');
     background-size: $b-size;
@@ -539,7 +568,7 @@ body {
 
 .front__page__planta {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/LAPLANTA.jpg');
-    @include front-page(90vh, $b-size, $color-repet, 0, $font-encabezado-home);
+    @include front-page(115vh, $b-size, $color-repet, 0, $font-encabezado-home);
 
     @include media-up(sx) {
         width: 100%;
@@ -589,6 +618,8 @@ body {
 
 .data__planta {
     background-color: rgba(40,0,92,0.56);
+    font-size: 1.3rem;
+    font-family: fantasy;
 
     @include media-up(md) {
         display: none;
@@ -612,6 +643,8 @@ body {
     gap: 5rem;
     justify-content: center;
     padding-bottom: 1.4rem;
+    font-weight: bold;
+    color: #dcc2e4;
 
 }
 
@@ -620,7 +653,7 @@ body {
 
 .second__part__planta {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/Ubicacionplanta.jpg');
-    @include front-page(100vh, cover, $color-repet, 0, $font-encabezado-home);
+    @include front-page(110vh, cover, $color-repet, 0, $font-encabezado-home);
 
     @include media-up(md) {
         height: 120vh;
@@ -777,7 +810,7 @@ body {
 
 .front__page__energia {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/ENERGIAportada.jpg');
-    @include front-page(90vh, cover, $color-repet, 0, $font-encabezado-home);
+    @include front-page(110vh, cover, $color-repet, 0, $font-encabezado-home);
 
     @include media-up(sx) {
         height: 100vh;
@@ -814,7 +847,7 @@ body {
 /*--------------------------- SEGUNDA PARTE ENERGIA ----------------*/
 
 .second__part__energia {
-    @include front-page(100vh, cover, $color-repet, 0, $font-encabezado-home);
+    @include front-page(115vh, cover, $color-repet, 0, $font-encabezado-home);
     background: linear-gradient(90deg, rgba(46,112,185,0.7652310924369747) 32%, rgba(30,176,187,1) 47%, rgba(131,58,180,1) 100%, rgba(253,35,31,1) 100%, rgba(253,39,32,1) 100%, rgba(252,176,69,1) 100%);
     display: flex;
 
@@ -886,9 +919,10 @@ body {
 
 /*--------------------........... TERCERA PARTE ENERGIA .............----------------*/
 
+
 .third__part__energia {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/FOCO.jpg');
-    @include front-page(110vh, cover, $color-repet, $padding-top, $font-encabezado-home);
+    @include front-page(115vh, cover, $color-repet, $padding-top, $font-encabezado-home);
     display: flex;
     justify-content: center;
 }
@@ -937,7 +971,7 @@ body {
 /*-------------------- ------ PRIMERA PARTE COMUNIDAD ------------------*/
 
 .front__page__comunidad {
-    @include front-page(90vh, cover, $color-repet, 0, $font-encabezado-home);
+    @include front-page(110vh, cover, $color-repet, 0, $font-encabezado-home);
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('../img/comunidad.jpg');
 
     @include media-up(sx) {
@@ -1002,7 +1036,7 @@ body {
 .second__part__comunidad {
     @include display-completo(flex, 0, 0, 5rem, 0, $font-encabezado-home, 0);
     background: radial-gradient(circle, rgba(109,85,132,1) 23%, rgba(34,62,94,1) 100%);
-    height: 100vh;
+    height: 110vh;
     background-size: cover;
     color: #F0F8FF;
 
@@ -1027,7 +1061,9 @@ body {
         }
 
         h2 {
-            margin-top: 39rem;
+            @include media-up(md) {
+                margin-top: 39rem;
+            }
         }
 
     }

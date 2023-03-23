@@ -62,7 +62,7 @@
 .footer__page {
   font-family: "Inconsolata", monospace;
   background: linear-gradient(90deg, rgba(46, 185, 181, 0.7652310924) 72%, rgb(131, 58, 180) 100%, rgb(253, 35, 31) 100%, rgb(253, 39, 32) 100%, rgb(252, 176, 69) 100%, rgb(253, 213, 29) 100%);
-  height: 120vh;
+  height: 133vh;
   font-size: 1.5rem;
 }
 @media screen and (max-width: 395px) {
@@ -312,6 +312,7 @@ button:hover b:nth-child(4) {
   background-color: rgba(94, 208, 138, 0.7);
   padding: 2rem;
   color: #dcc2e4;
+  width: 38rem;
 }
 @media screen and (max-width: 395px) {
   .second__part__home section {
@@ -335,6 +336,7 @@ button:hover b:nth-child(4) {
 .second__part__home section h2 {
   font-size: 3rem;
   margin-bottom: 2rem;
+  text-align: center;
 }
 @media screen and (max-width: 768px) {
   .second__part__home section h2 {
@@ -496,7 +498,7 @@ button:hover b:nth-child(4) {
 /*---------------------- PRIMERA PARTE BIOMASA ----------------------*/
 .front__page__biomasa {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/portadaBiomasa.jpg");
-  height: 90vh;
+  height: 100vh;
   background-size: cover;
   color: #F0F8FF;
   padding: 0;
@@ -522,7 +524,7 @@ button:hover b:nth-child(4) {
   }
 }
 .front__page__biomasa .what__is__biomass a {
-  transform: translate(-40rem, 20rem);
+  transform: translate(-40rem, 17rem);
 }
 @media screen and (max-width: 768px) {
   .front__page__biomasa .what__is__biomass a {
@@ -530,6 +532,26 @@ button:hover b:nth-child(4) {
   }
 }
 
+.material-symbols-outlined {
+  color: antiquewhite;
+  animation: button 1s infinite;
+  width: 3rem;
+}
+
+@keyframes button {
+  0% {
+    transform: scale(0.99);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 25px rgba(255, 255, 255, 0);
+  }
+  100% {
+    transform: scale(0.99);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
 /*---------------------- SEGUNDA PARTE BIOMASA --------------------*/
 .second__part__biomasa {
   display: grid;
@@ -601,7 +623,7 @@ button:hover b:nth-child(4) {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/APILADAS.jpg");
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: 100vh;
+  height: 110vh;
   font-family: 0;
   align-items: 0;
   color: #F0FFF0;
@@ -706,7 +728,7 @@ button:hover b:nth-child(4) {
 .quarter__part__biomasa {
   display: flex;
   grid-template-columns: 0;
-  height: 90vh;
+  height: 100vh;
   font-family: "Dosis";
   align-items: 0;
   justify-content: center;
@@ -738,7 +760,7 @@ button:hover b:nth-child(4) {
 /*--------------------- PRIMERA PARTE PLANTA ------------------------*/
 .front__page__planta {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/LAPLANTA.jpg");
-  height: 90vh;
+  height: 115vh;
   background-size: cover;
   color: #F0FFF0;
   padding: 0;
@@ -795,6 +817,8 @@ button:hover b:nth-child(4) {
 
 .data__planta {
   background-color: rgba(40, 0, 92, 0.56);
+  font-size: 1.3rem;
+  font-family: fantasy;
 }
 @media screen and (max-width: 768px) {
   .data__planta {
@@ -817,12 +841,14 @@ button:hover b:nth-child(4) {
   gap: 5rem;
   justify-content: center;
   padding-bottom: 1.4rem;
+  font-weight: bold;
+  color: #dcc2e4;
 }
 
 /*--------------------------- SEGUNDA PARTE PLANTA -------------*/
 .second__part__planta {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/Ubicacionplanta.jpg");
-  height: 100vh;
+  height: 110vh;
   background-size: cover;
   color: #F0FFF0;
   padding: 0;
@@ -993,7 +1019,7 @@ button:hover b:nth-child(4) {
 /*---------------------- PRIMERA PARTE ENERGIA ---------------*/
 .front__page__energia {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/ENERGIAportada.jpg");
-  height: 90vh;
+  height: 110vh;
   background-size: cover;
   color: #F0FFF0;
   padding: 0;
@@ -1037,7 +1063,7 @@ button:hover b:nth-child(4) {
 
 /*--------------------------- SEGUNDA PARTE ENERGIA ----------------*/
 .second__part__energia {
-  height: 100vh;
+  height: 115vh;
   background-size: cover;
   color: #F0FFF0;
   padding: 0;
@@ -1115,7 +1141,7 @@ button:hover b:nth-child(4) {
 /*--------------------........... TERCERA PARTE ENERGIA .............----------------*/
 .third__part__energia {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/FOCO.jpg");
-  height: 110vh;
+  height: 115vh;
   background-size: cover;
   color: #F0FFF0;
   padding: 8rem;
@@ -1170,7 +1196,7 @@ button:hover b:nth-child(4) {
 
 /*-------------------- ------ PRIMERA PARTE COMUNIDAD ------------------*/
 .front__page__comunidad {
-  height: 90vh;
+  height: 110vh;
   background-size: cover;
   color: #F0FFF0;
   padding: 0;
@@ -1249,7 +1275,7 @@ button:hover b:nth-child(4) {
   font-family: "Jost", sans-serif;
   flex-direction: 0;
   background: radial-gradient(circle, rgb(109, 85, 132) 23%, rgb(34, 62, 94) 100%);
-  height: 100vh;
+  height: 110vh;
   background-size: cover;
   color: #F0F8FF;
 }
@@ -1276,8 +1302,10 @@ button:hover b:nth-child(4) {
     padding: 3rem 3rem 3rem 3rem;
   }
 }
-.second__part__comunidad section h2 {
-  margin-top: 39rem;
+@media screen and (max-width: 768px) {
+  .second__part__comunidad section h2 {
+    margin-top: 39rem;
+  }
 }
 
 .puntos__comunidad {

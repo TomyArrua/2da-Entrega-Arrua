@@ -1,0 +1,29 @@
+%d-grid-links {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    font-size: 13px;
+    color: #F0F8FF;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    align-items: center;
+}
+
+%button-outlined {
+    font-size: 3rem;
+    color: #F0F8FF;
+    margin-top: 2rem;
+}
+
+%third__part__planta {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    height: 250vh;
+    font-family: 'Jost', sans-serif;
+    background-size: cover;
+    color: #F0F8FF;
+    display: flex;
+    flex-direction: column;
+}

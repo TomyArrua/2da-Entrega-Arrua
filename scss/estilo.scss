@@ -1,0 +1,754 @@
+
+// BASE 
+
+@import 'base/variables.scss';
+@import 'base/maps';
+@import 'base/extend';
+@import 'base/operadores.scss';
+@import 'base/mixins';
+@import 'base/media-query';
+
+// COMPONENTS
+
+@import 'components/footer';
+@import 'components/header';
+
+
+/*----------------- PRIMERA PARTE HOME --------------*/
+
+
+.front__page__home {
+    background-image: $bgimg-home;
+    height: 139vh;
+    font-family: 'Jost', sans-serif;
+    background-size: cover;
+
+    }
+        .front__page__home a img {
+            border-radius: 50px;
+                }
+                .front__page__home ul {
+        
+                    list-style: none;
+
+                    }
+                        .front__page__home nav {
+                            padding: 1.5rem;
+
+                        } 
+                    .links__home {
+                        @extend %d-grid-links;
+
+                        }
+                        
+                        
+                    
+
+                .ciclo__virtuosoo {
+                    padding-top: 3rem;
+                    padding-bottom: 2rem;
+                    }
+
+            .ciclo__virtuosoo span {
+                border: 3px outset #F0F8FF;
+                border-radius: 50%;
+                text-align: center;
+                
+            }
+
+
+
+/*------------------------ SEGUNDA PARTE HOME ----------------------*/
+
+.second__part__home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/eucalipto-globulus-ence-sld-1-1030x664.jpg');
+    padding: map-get($segunda-parte-home, relleno );
+    font-family: map-get($segunda-parte-home, fuente );
+    height: 92vh;
+    line-height: 1.5rem;
+
+        section {
+            background-color: rgba(94, 208, 138, 0.7);
+            padding: 2rem;
+            color: #dcc2e4;
+            width: 38rem;
+
+        
+
+            p {
+                font-size: 1.7rem;
+                line-height: 2.2rem;
+                
+            
+                h2 {
+                    font-size: 3rem;
+                    margin-bottom: 2rem;
+                    text-align: center;
+
+                }
+                    .material-symbols-outlined {
+                        @extend %button-outlined;
+                }          
+            }
+        }
+
+@media (max-width: 568px) {
+        .second__part__home {
+            height: 70vh;
+            background-size: cover;
+        
+    }
+    
+    .second_home {
+        transform: translate(-13rem);
+        width: 22rem;
+        height: 38rem;
+
+        h2 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 2rem;
+    
+            p {
+                font-size: 1.8rem;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (min-width: 569px) and (max-width: 1100px) {
+    .second__part__home {
+        height: 70vh;
+        background-size: cover;
+        display: grid;
+        justify-content: center;
+}
+
+.second_home {
+    transform: translate(-12rem);
+    width: 30rem;
+    height: 38rem;
+    
+    h2 {
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 2rem;
+
+
+        p {
+            font-size: 2rem;
+            margin-bottom: 5rem;
+            text-align: center;
+
+            }
+        }
+    }
+}
+
+}
+
+
+
+/*--------------------- TERCERA PARTE HOME ---------------------*/
+
+.third__part__home {
+    background-image: map-get($tercera-parte-home, b-image );
+    height: map-get($tercera-parte-home, altura );
+    background-size: map-get($tercera-parte-home, b-size );
+    padding: map-get($tercera-parte-home, relleno );
+
+    section {
+        background-color: rgba(89, 0, 141, 0.5); 
+        font-size: 1.5rem;
+        padding: 4rem;
+        
+        
+
+        
+        h3 {
+            font-size: 3rem;
+            margin-bottom: 1.2rem;
+            
+
+            
+            .material-symbols-outlined {
+                @extend %button-outlined;
+                margin-right: 2rem;
+                
+
+            }
+        }
+    } 
+}
+
+/*------------------- CUARTA PARTE HOME --------------------*/
+
+.quarter__part__home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/sustentables.jpg');
+    @include front-page(110vh, cover, #F0FFF0, 9rem 0 0 0, 'Garamond');
+    display: grid;
+    justify-content: center;
+
+    section {
+        padding: 4rem;
+        height: 35rem;
+
+        h4 {
+            font-size: 3rem;
+        }
+        
+        p {
+            font-size: 2rem;
+        }
+        
+    }
+
+    @media (max-width: 568px) {
+        .quarter__home {
+            padding: 2rem;
+            text-align: center;
+            height: 45rem;
+            width: 23rem;
+
+            h4 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+    .material-symbols-outlined {
+        @extend %button-outlined;
+        margin-right: 2rem;
+        
+}
+
+/*-------------------- QUINTA PARTE HOME --------------------*/
+
+.fifth__part__home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/COMUNIDADD.jpg');
+    @include front-page(95vh, cover, #F0FFF0, 0, 'Garamond');
+
+
+    section { 
+        background-color: rgba(108, 0, 255, 0.6);
+        clip-path: polygon(30% 0%, 50% 15%, 70% 0%, 90% 10%, 91% 30.5%, 80% 70%, 50% 100%, 20% 70%, 8.2% 33.5%, 10% 10%);
+        padding: 4rem 0 0 0 ;
+        text-align: center;
+        transform: translate(28rem, 2rem);
+        font-family: 'Karla';
+
+        h5 {
+            margin-top: 2rem;
+            font-size: 2.5rem;
+
+            p {
+                font-size: 2rem;
+            }
+        }
+
+    } 
+    
+    @media (max-width: 568px) {
+        .fifth__part__home {
+            height: 160vh;
+            
+        
+        }
+        
+        .fifth {
+                padding-top: 3rem;
+                padding: 1rem;
+                transform: translate(1rem, 8rem);
+                clip-path: none;
+                width: 23rem;
+                height: 48rem;
+
+                h5 {
+                    margin-bottom: 1.5rem;
+                }
+
+                p {
+                    font-size: 1.8rem;
+                }
+                
+            }
+        
+    }
+
+    @media (min-width: 569px) and (max-width: 1100px) {
+        .fifth__part__home {
+            height: 150vh;
+            
+        
+        }
+        
+        .fifth {
+                padding: 2rem 2rem;
+                transform: translate(2rem, 5rem);
+                clip-path: none;
+                width: 30rem;
+                height: 52rem;
+
+                h5 {
+                    margin-bottom: 1rem;
+                    font-size: 3rem;
+                }
+
+                p {
+                    font-size: 2rem;
+                }
+                
+            }
+    }
+
+}
+
+
+
+
+
+/*---------------------- PRIMERA PARTE BIOMASA ----------------------*/
+
+.front__page__biomasa {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/portadaBiomasa.jpg');
+    @include front-page(100vh, cover, #F0F8FF, 0, 'Jost');
+
+    .what__is__biomass {
+        display: map-get($flex, d-flex );
+        align-items: map-get($flex, alinear-items );
+        justify-content: map-get($flex, justificar );
+
+        
+        a {
+            transform: translate(-40rem, 17rem);
+
+        }
+    }
+}
+
+
+.material-symbols-outlined  {
+    color: antiquewhite;
+    animation: button 1s infinite;
+    width: 3rem;
+}
+
+@keyframes button {
+    0% {
+        transform: scale(.99);
+        box-shadow: 0 0 0 0 rgba(256, 256, 256, .1);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 25px rgba(256, 256, 256, 0);
+    }
+
+    100% {
+        transform: scale(.99);
+        box-shadow: 0 0 0 0 rgba(256, 256, 256, 0);
+    }
+}
+
+
+/*---------------------- SEGUNDA PARTE BIOMASA --------------------*/
+
+.second__part__biomasa {
+    @include display-grid(grid, repeat(3, 1fr), 100vh, 'Dosis', center);
+    background-color: rgba(0, 0, 0, 0.1);
+    align-items: center;
+    
+
+}
+
+.second__part__biomasa1 {
+    background-color: rgba(0, 138, 8, 0.7); 
+    width: 18rem;
+    height: 30rem;
+    font-size: 18px;
+    padding: 2rem;
+    margin-left: 2rem;
+
+
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.second__part__biomasa2 {
+    font-size: 20px;
+    padding: 2rem; 
+    background-color: rgba(0, 0, 0, 0.2);
+    
+
+    b {
+        font-weight: bold;
+        font-size: 2.5rem;
+
+    }
+}
+
+/*----------------------- TERCERA PARTE BIOMASA ---------------------*/
+
+.third__part__biomasa {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/APILADAS.jpg');
+    @include display-grid(grid, repeat(2, 1fr), 110vh, 0, 0);
+    color: $color-repet;
+    background-size: $b-size;
+
+}
+
+.images__biomasa {
+    @include display-grid(grid , repeat(6, 5rem), 0, $font-dosis, start);
+    align-content: center;
+    justify-content: space-evenly;
+    position: relative;
+    left: 40rem;
+    top: -20rem;
+
+
+    span {
+        line-height: 3rem;
+    }
+}
+
+.third__part__biomasa1 {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 28rem;
+    height: 38rem;
+    font-family: $font-dosis;
+    padding: 2rem 0 0 4rem;
+    color: rgba(0,0,0,0.76);
+    margin: 3em 0 0 5em;
+    font-size: 1.5rem;
+
+
+    h3 {
+        font-weight: bold;
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+
+
+    }
+}
+
+.formatos {
+    font-size: 26px;
+    width: 22rem;
+    height: 10rem;
+    padding: 2rem;
+    background-color: rgba(0,0,92,0.56);
+    font-family: $font-dosis;
+    text-align: center;
+    margin-top: 6rem;
+    position: relative;
+    left: 6rem;
+
+}
+
+
+/*-------------------- CUARTA PARTE BIOMASA --------------------------*/
+
+.quarter__part__biomasa {
+    @include display-grid(flex, 0, 100vh, $font-dosis, 0);
+    justify-content: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.3)), url('../img/ALAMCENAMIENTO.jpg');
+    background-size: $b-size;
+
+    section {
+        background-color: rgba(255,148,54,0.66);
+        width: 28rem;
+        height: 33rem;
+        padding: 2rem 0 0 0;
+        text-align: center;
+        margin-top: 3rem;
+
+
+        h4 {
+            font-size: 48px;
+            margin-bottom: 1.5rem;
+
+            p {
+                font-size: 26px;
+            }
+        }
+    }
+}
+
+/*--------------------- PRIMERA PARTE PLANTA ------------------------*/
+
+.front__page__planta {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/LAPLANTA.jpg');
+    @include front-page(115vh, $b-size, $color-repet, 0, $font-encabezado-home);
+
+}
+
+.how__the__plant__works {
+    display: map-get($flex, d-flex );
+    align-items: map-get($flex, alinear-items );
+    justify-content: map-get($flex, justificar );
+    margin-bottom: 8rem;
+
+
+
+    a {
+        transform: translate(-40rem, 2rem);
+
+    }
+}
+
+.data__planta {
+    background-color: rgba(40,0,92,0.56);
+    font-size: 1.3rem;
+    font-family: fantasy;
+
+
+}
+
+.data__planta1 {
+    display: grid;
+    grid-template-columns: repeat(4, 10rem);
+    gap: 5rem;
+    justify-content: center;
+    color: $color-repet;
+    padding: 2rem;
+
+    
+}
+
+.data__planta2 {
+    display: grid;
+    grid-template-columns: repeat(4, 10rem);
+    gap: 5rem;
+    justify-content: center;
+    padding-bottom: 1.4rem;
+    font-weight: bold;
+    color: #dcc2e4;
+
+}
+
+
+/*--------------------------- SEGUNDA PARTE PLANTA -------------*/
+
+.second__part__planta {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/Ubicacionplanta.jpg');
+    @include front-page(110vh, cover, $color-repet, 0, $font-encabezado-home);
+
+
+    section {
+        @include display-grid(grid, repeat(2, 22rem), none, 0, 0);
+        justify-content: center;
+        padding-top: 2rem;
+
+
+
+        div {
+            padding: 2rem;
+            color: black;
+            background-color: rgba(255, 255, 255, 0.5);
+
+        }
+    
+    }
+    
+}
+
+/*--------------------- TERCERA PARTE PLANTA -----------------*/
+
+.third__part__planta {
+    @extend %third__part__planta;
+
+
+    
+}
+
+.ciclos__produc {
+    @include display-completo(grid, repeat(3, 15rem), repeat(3, 20rem), 10rem, center, 'Cambria', 0);
+    text-align: center;
+
+
+
+    img {
+        border-radius: 10%;
+    }
+}
+
+.ciclo__produccion__planta {
+    @include display-completo(flex, 0, 0, 0, center, 'Gill Sans', column);
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 4rem;
+    background-color: rgba(0, 0, 255, 0.6);
+    font-size: 2rem;
+
+}
+
+.orden {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10%;
+    padding: .5rem;
+    margin: 1rem 0 1rem 0;
+}
+
+.text__ciclo {
+    font-size: 1.2rem;
+}
+
+.titulo {
+    color: #000;
+    margin-bottom: 1rem;
+
+}
+
+
+/*---------------------- PRIMERA PARTE ENERGIA ---------------*/
+
+
+.front__page__energia {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/ENERGIAportada.jpg');
+    @include front-page(110vh, cover, $color-repet, 0, $font-encabezado-home);
+
+
+}
+
+.clean__energy {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin-bottom: 8rem;
+
+
+    a {
+        transform: translate(-40rem, 20rem);
+
+    }
+}
+
+/*--------------------------- SEGUNDA PARTE ENERGIA ----------------*/
+
+.second__part__energia {
+    @include front-page(115vh, cover, $color-repet, 0, $font-encabezado-home);
+    background: linear-gradient(90deg, rgba(46,112,185,0.7652310924369747) 32%, rgba(30,176,187,1) 47%, rgba(131,58,180,1) 100%, rgba(253,35,31,1) 100%, rgba(253,39,32,1) 100%, rgba(252,176,69,1) 100%);
+    display: flex;
+
+}
+
+.energia__limpia {
+    @include display-completo(flex, 0, 0, 3rem, 0, 'Times New Roman', column );
+    margin: 4rem 0 0 2rem;
+
+    section {
+        text-align: center;
+    }
+    p {
+        text-align: center;
+        padding-top: 2rem;
+        font-size: 1.2rem;
+
+        
+    }
+}
+
+.titulo__second {
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 6rem 6rem 0 6rem ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+
+
+/*--------------------........... TERCERA PARTE ENERGIA .............----------------*/
+
+
+.third__part__energia {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/FOCO.jpg');
+    @include front-page(115vh, cover, $color-repet, $padding-top, $font-encabezado-home);
+    display: flex;
+    justify-content: center;
+}
+
+.third__part {
+    background-color: rgba(200,35,31,.4);
+    height: 36rem;
+    padding: 5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+
+
+
+        h3 {
+            font-size: 40px;
+}
+
+            p {
+            font-size: 34px;
+    }
+}
+
+/*-------------------- ------ PRIMERA PARTE COMUNIDAD ------------------*/
+
+.front__page__comunidad {
+    @include front-page(110vh, cover, $color-repet, 0, $font-encabezado-home);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('../img/comunidad.jpg');
+
+    
+}
+
+.community__engagement {
+    display: map-get($flex, d-flex );
+    align-items: map-get($flex , alinear-items );
+    justify-content: map-get($flex, justificar );
+    margin-bottom: 8rem;
+    text-align: center;
+
+
+    a {
+        transform: translate(-40rem, 20rem);
+    }
+}
+
+.data__comunidad {
+    @include display-completo(grid, repeat(2, 30rem), 0, 4rem, center, fantasy, 0);
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(46,185,181,0.4);
+}
+
+
+/*----------------------------- SEGUNDA PARTE COMUNIDAD --------------------------------*/
+
+.second__part__comunidad {
+    @include display-completo(flex, 0, 0, 5rem, 0, $font-encabezado-home, 0);
+    background: radial-gradient(circle, rgba(109,85,132,1) 23%, rgba(34,62,94,1) 100%);
+    height: 110vh;
+    background-size: cover;
+    color: #F0F8FF;
+
+
+    section {
+        background: radial-gradient(circle, rgba(120,102,78,1) 30%, rgba(34,62,94,1) 100%);
+        padding: 6rem 6rem 0 6rem ;
+        text-align: center;
+
+    }
+    
+}
+
+.puntos__comunidad {
+    padding-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+

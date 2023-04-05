@@ -1,0 +1,2464 @@
+
+// BASE 
+
+@import 'base/variables.scss';
+@import 'base/maps';
+@import 'base/extend';
+@import 'base/operadores.scss';
+@import 'base/mixins';
+@import 'base/media-query';
+
+// COMPONENTS
+
+@import 'components/footer';
+@import 'components/header';
+
+
+/*----------------- PRIMERA PARTE HOME --------------*/
+
+
+.front__page__home {
+    background-image: $bgimg-home;
+    height: 169vh;
+    font-family: 'Jost', sans-serif;
+    background-size: cover;
+
+    }
+
+    .front__page__home a img {
+        border-radius: 50px;
+
+        ul {
+            list-style: none;
+        }
+
+            nav {
+                padding: 1.5rem;
+        }
+    }
+
+    .links__home {
+    @extend %d-grid-links;
+
+    }
+
+    .ciclo__virtuosoo {
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+
+        span {
+            border: 3px outset #F0F8FF;
+            border-radius: 50%;
+            text-align: center;
+        }
+    }
+
+    .link__home {
+        animation: rotate 1s linear infinite;
+    }
+            
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+    
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    
+        .img__front {
+            animation: zoomIn 5s forwards infinite;
+        }
+    
+        @keyframes zoomIn {
+            from {
+                transform: scale(0);
+            }
+    
+            to {
+                transform: scale(1);
+            }
+        }
+    
+    
+    
+@media (min-width: 1200px) and (max-width: 1920px) { 
+
+    #fireworks {
+            position: absolute;
+            padding: 5rem;
+            top: 35%;
+            left: 80%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            animation: fireworks 10s ease-out forwards infinite;
+        }
+    
+        @keyframes fireworks {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 0;
+            }
+    
+            50% {
+                width: 400px;
+                height: 400px;
+                opacity: 1;
+            }
+    
+            100% {
+                width: 0;
+                height: 0;
+                opacity: 0;
+            }
+        }
+    
+        .firework {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            animation: explode .5s ease-out infinite;
+        }
+    
+        @keyframes explode {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+    
+            50% {
+                transform: scale(5);
+                opacity: 0.5;
+            }
+    
+            100% {
+                transform: scale(10);
+                opacity: 0;
+        }
+    }
+}
+
+    #grass {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        
+    }
+
+    .grass-blade {
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-left: 10px inset transparent;
+        border-right: 10px outset transparent;
+        border-bottom: 10px outset #00ff884e;
+        transform: translateY(30px);
+        animation: grow 1s linear forwards infinite;
+    }
+
+    @keyframes grow {
+        0% {
+            transform: translateY(30px);
+            width: 0;
+            height: 0;
+            border-bottom: 10px outset #00ff8830;
+        }
+
+        100% {
+            transform: translateY(0);
+            width: 20px;
+            height: 50px;
+            border-bottom: 50px inset #00ff884b;
+        }
+    }
+
+
+/*------------------------ SEGUNDA PARTE HOME ----------------------*/
+
+.second__part__home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/eucalipto-globulus-ence-sld-1-1030x664.jpg');
+    padding: map-get($segunda-parte-home, relleno );
+    font-family: map-get($segunda-parte-home, fuente );
+    height: 92vh;
+    line-height: 1.5rem;
+
+    section {
+        background-color: rgba(94, 140, 208, 0.7);
+        padding: 2rem;
+        color: #dcc2e4;
+        width: 38rem;
+
+        p {
+            font-size: 1.7rem;
+            line-height: 2.2rem;
+                
+        }
+            h2 {
+                font-size: 3rem;
+                margin-bottom: 2rem;
+                text-align: center;
+        }
+                .material-symbols-outlined {
+                    @extend %button-outlined;
+    }          
+            
+}
+
+/*------------- MEDIA QUERY SEGUNDA PARTE HOME----------*/
+
+@media (max-width: 568px) {
+        .second__part__home {
+            height: 70vh;
+            background-size: cover;
+    }
+    
+        .second_home {
+            transform: translate(-13rem);
+            width: 20rem;
+            height: 38rem;
+
+            h2 {
+                text-align: center;
+                font-size: 2.8rem;
+                margin-bottom: 2rem;
+    
+                p {
+                    font-size: 1.8rem;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+/*------------- MEDIA QUERY SEGUNDA PARTE HOME----------*/
+
+    @media (min-width: 569px) and (max-width: 1100px) {
+        .second_home {
+            transform: translate(-10rem);
+            width: 32rem;
+            height: 33rem;
+        }
+    }
+}
+
+
+
+
+/*--------------------- TERCERA PARTE HOME ---------------------*/
+
+.third__part__home {
+    background-image: map-get($tercera-parte-home, b-image );
+    height: map-get($tercera-parte-home, altura );
+    background-size: map-get($tercera-parte-home, b-size );
+    padding: map-get($tercera-parte-home, relleno );
+    font-family: 'Heebo', sans-serif;
+
+    section {
+        background-color: rgba(89, 0, 141, 0.5); 
+        font-size: 1.5rem;
+        padding: 4rem;
+
+        
+        h3 {
+            font-size: 3rem;
+            margin-bottom: 1.2rem;
+            
+
+            
+            .material-symbols-outlined {
+                @extend %button-outlined;
+                margin-right: 2rem;
+                
+
+            }
+        }
+    }
+}
+
+
+
+
+/*------------------- CUARTA PARTE HOME --------------------*/
+
+.quarter__part__home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/sustentables.jpg');
+    @include front-page(110vh, cover, #F0FFF0, 9rem 0 0 0, 'Garamond');
+    display: grid;
+    justify-content: center;
+
+    section {
+        padding: 4rem;
+        height: 35rem;
+
+        h4 {
+            font-size: 3rem;
+            text-align: center;
+            color: #dcc2e4;
+        }
+        
+        p {
+            font-size: 2rem;
+            text-align: center;
+        }
+        
+    }
+
+/*------------- MEDIA QUERY CUARTA PARTE HOME----------*/
+
+    @media (max-width: 568px) {
+        .quarter__home {
+            padding: 2rem;
+            text-align: center;
+            height: 40rem;
+            width: 20rem;
+            margin-right: 2rem;
+
+            h4 {
+                font-size: 2.2rem;
+            }
+
+            p {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    /*------------- MEDIA QUERY CUARTA PARTE HOME----------*/
+
+    @media (min-width: 569px) and (max-width: 1100px) {
+        .quarter__home {
+            padding: 2rem;
+            text-align: center;
+            height: 45rem;
+            width: 33rem;
+
+            h4 {
+                font-size: 3.5rem;
+                margin-bottom: 2rem;
+            }
+
+            p {
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+    .material-symbols-outlined {
+        @extend %button-outlined;
+        margin-right: 2rem;
+        
+}
+
+/*-------------------- QUINTA PARTE HOME --------------------*/
+
+.fifth__part__home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/COMUNIDADD.jpg');
+    @include front-page(110vh, cover, #F0FFF0, 0, 'Garamond');
+
+
+    .fifth { 
+        background-color: rgba(108, 0, 255, 0.6);
+        clip-path: polygon(30% 0%, 50% 15%, 70% 0%, 90% 10%, 91% 30.5%, 80% 70%, 50% 100%, 20% 70%, 8.2% 33.5%, 10% 10%);
+        padding: 4rem;
+        text-align: center;
+        transform: translate(28rem, 2rem);
+        font-family: 'Karla';
+        font-size: 1.5rem;
+        
+        h5 {
+            margin-top: 2rem;
+            font-size: 2.5rem;
+
+        }
+
+    } 
+
+    /*------------- MEDIA QUERY QUINTA PARTE HOME----------*/
+
+    @media (max-width: 568px) {
+        
+        .fifth {
+                
+                padding: 1rem;
+                transform: translate(1rem, 8rem);
+                clip-path: none;
+                width: 21rem;
+                height: 52rem;
+                margin-bottom: 2rem;
+
+                h5 {
+                    margin-bottom: 1.5rem;
+                    color: #000000;
+                }
+
+                p {
+                    font-size: 1.8rem;
+                }
+                
+            }
+        
+    }
+
+    /*------------- MEDIA QUERY QUINTA PARTE HOME----------*/
+
+    @media (min-width: 569px) and (max-width: 1100px) {
+        .fifth__part__home {
+            height: 150vh;
+            
+        
+        }
+        
+        .fifth {
+                padding: 2rem 2rem;
+                transform: translate(4rem, 4rem);
+                clip-path: none;
+                width: 40rem;
+                height: 52rem;
+
+                h5 {
+                    margin-bottom: 3rem;
+                    font-size: 3.5rem;
+                }
+
+                p {
+                    font-size: 2.3rem;
+                }
+                
+            }
+    }
+
+}
+
+
+@media (min-width: 1200px) and (max-width: 1920px) { 
+.fifth:before,
+    .fifth:after {
+        content: "";
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .fifth:before {
+        top: 0;
+        left: -25px;
+    }
+
+    .fifth:after {
+        top: -25px;
+        left: 0;
+    }
+
+    .fifth:hover:before,
+    .fifth:hover:after {
+        animation: heartbeat 1s infinite;
+    }
+
+    @keyframes heartbeat {
+        0% {
+            transform: scale(1);
+        }
+
+        30% {
+            transform: scale(1.1);
+        }
+
+        50% {
+            transform: scale(1.2);
+        }
+
+        70% {
+            transform: scale(1.3);
+        }
+
+        90% {
+            transform: scale(1.4);
+        }
+
+        100% {
+            transform: scale(1.5);
+        }
+    }
+}
+
+
+
+/*---------------------- PRIMERA PARTE BIOMASA ----------------------*/
+
+.front__page__biomasa {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/portadaBiomasa.jpg');
+    @include front-page(100vh, cover, #F0F8FF, 0, 'Jost');
+
+    .what__is__biomass {
+        display: map-get($flex, d-flex );
+        align-items: map-get($flex, alinear-items );
+        justify-content: map-get($flex, justificar );
+
+        a {
+            transform: translate(-40rem, 17rem);
+
+        }
+    }
+}
+
+/*------------- MEDIA QUERY PRIMERA PARTE BIOMASA ----------*/
+    @media (max-width: 568px) {
+        .front__page__biomasa {
+            @include front-page(70vh, cover, #F0F8FF, 0, 'Jost');
+        
+            .what__is__biomass {
+                display: grid;
+                align-items: center;
+            
+                a {
+                    transform: translate(4rem, 8rem);
+            }
+        }
+    }
+
+    .thumb {
+        display: none;
+    }
+}
+
+/*------------- MEDIA QUERY PRIMERA PARTE BIOMASA----------*/
+
+    @media (min-width: 569px) and (max-width: 1100px) {
+
+        .front__page__biomasa {
+            @include front-page(70vh, cover, #F0F8FF, 0, 'Jost');
+        
+            .what__is__biomass {
+                display: grid;
+                align-items: center;
+            
+                a {
+                    transform: translate(4rem, 8rem);
+            }
+        }
+    }
+}
+
+/*------------------ ANIMACION BOTON FOOTER ----------------*/
+
+    .material-symbols-outlined  {
+        color: antiquewhite;
+        animation: button 1s infinite;
+        width: 3rem;
+    }
+
+    @keyframes button {
+        0% {
+            transform: scale(.99);
+            box-shadow: 0 0 0 0 rgba(256, 256, 256, .1);
+        }
+
+        70% {
+            transform: scale(1);
+            box-shadow: 0 0 0 25px rgba(256, 256, 256, 0);
+        }
+
+        100% {
+            transform: scale(.99);
+            box-shadow: 0 0 0 0 rgba(256, 256, 256, 0);
+        }
+    }
+
+
+/*---------------------- SEGUNDA PARTE BIOMASA --------------------*/
+
+.second__part__biomasa {
+    @include display-grid(grid, repeat(3, 1fr), 100vh, 'Dosis', center);
+    background-color: rgba(0, 0, 0, 0.1);
+    align-items: center;
+    
+
+}
+
+.second__part__biomasa1 {
+    background-color: rgba(0, 138, 8, 0.7); 
+    width: 18rem;
+    height: 30rem;
+    font-size: 18px;
+    padding: 2rem;
+    margin-left: 4rem;
+
+
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.second__part__biomasa2 {
+    font-size: 20px;
+    padding: 2rem; 
+    background-color: rgba(0, 0, 0, 0.2);
+
+    b {
+        font-weight: bold;
+        font-size: 2.5rem;
+
+    }
+}
+
+/*------------- MEDIA QUERY SEGUNDA PARTE BIOMASA----------*/
+    @media (max-width: 568px) {
+
+        .second__part__biomasa {
+            height: 215vh;
+            display: flex;
+            flex-direction: column;
+            gap: 7rem;
+        }
+
+        .second__part__biomasa1 {
+            margin: 3rem 0 0rem 0;
+            margin-right: 1rem;
+            height: 50rem;
+            width: 22rem;
+
+            h2 {
+                text-align: center;
+                color: #000080;
+            }
+
+            p {
+                font-size: 1.7rem;
+                font-weight: bolder;
+                text-align: justify;
+            }
+            
+        }
+
+        .second__part__biomasa2 {
+            height: 45rem;
+            width: 21rem;
+            margin-right: 1rem;
+            text-align: center;
+
+            b {
+                color: #3CB371;
+            }
+
+            p {
+                font-size: 1.7rem;
+                font-weight: bolder;
+            }
+        }
+        
+        .image-container {
+            position: relative;
+        }
+    }
+/*------------- MEDIA QUERY SEGUNDA PARTE BIOMASA ----------*/
+
+    @media (min-width: 569px) and (max-width: 1100px) {
+
+        .second__part__biomasa {
+            height: 215vh;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 7rem;
+        }
+
+        .second__part__biomasa1 {
+            margin: 5rem 0 0rem 0;
+            height: 43rem;
+            width: 32rem;
+
+            h2 {
+                text-align: center;
+                font-size: 4rem;
+                color: #B22222;
+                
+            }
+
+            p {
+                font-size: 2rem;
+                font-weight: bolder;
+                text-align: justify;
+            }
+        }
+
+        .second__part__biomasa2 {
+            height: 45rem;
+            width: 32rem;
+            margin-right: 1rem;
+            text-align: center;
+
+            b {
+
+                color: #008000;
+                font-size: 4rem;
+            }
+
+            p {
+                font-size: 2rem;
+                font-weight: bolder;
+            }
+        }
+
+        .image-container {
+            position: relative;
+        }
+
+        .image-container {
+            position: relative;
+            margin-right: 4rem;
+        }
+
+        .image-container img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .image-container::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 10%;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8));
+            transform-origin: right;
+            transform: scaleY(-1);
+            opacity: 0.5;
+            mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        }
+}
+
+
+/*----------------------- TERCERA PARTE BIOMASA ---------------------*/
+
+.third__part__biomasa {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/APILADAS.jpg');
+    @include display-grid(grid, repeat(2, 1fr), 110vh, 0, 0);
+    color: $color-repet;
+    background-size: $b-size;
+
+}
+
+.images__biomasa {
+    @include display-grid(grid , repeat(6, 8rem), 0, $font-dosis, start);
+    align-content: center;
+    justify-content: space-evenly;
+    position: relative;
+    left: 40rem;
+    top: -18rem;
+    font-family: 'Alkatra', cursive;
+
+    img {
+        border-radius: 30%;
+    }
+
+    div {
+        line-height: 3rem;
+        text-align: center;
+        font-size: 1.8rem;
+        color: #FFFAF0;
+    }
+}
+
+.third__part__biomasa1 {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 24rem;
+    height: 38rem;
+    font-family: $font-dosis;
+    padding: 2rem 0 0 4rem;
+    color: rgba(0,0,0,0.76);
+    margin: 3em 0 0 5em;
+    font-size: 1.5rem;
+
+    h3 {
+        font-weight: bold;
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.formatos {
+    font-size: 26px;
+    width: 22rem;
+    height: 10rem;
+    padding: 2rem;
+    background-color: rgba(0,0,92,0.56);
+    font-family: $font-dosis;
+    text-align: center;
+    margin-top: 6rem;
+    position: relative;
+    left: 6rem;
+
+}
+
+/*------------- MEDIA QUERY TERCERA PARTE BIOMASA ----------*/
+
+    @media (max-width: 568px) {
+        .third__part__biomasa {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 210vh;
+            background-size: cover;
+            
+        }
+
+        .third__part__biomasa1 {
+            width: 24rem;
+            height: 40rem;
+            margin: 3em 0 0 .9rem;
+            background-color: rgba(47, 196, 190, 0.5);
+            color: #dcc2e4;
+
+            h3 {
+                color: #000080;
+            }
+
+            p {
+                font-size: 1.8rem;
+            }
+        }
+
+        .images__biomasa {
+            display: grid;
+            grid-template-columns: repeat(2, 1rem);
+            position: relative;
+            left: 3.4rem;
+            justify-content: start;
+            top: 32rem;
+            gap: 12rem;
+            
+            div {
+                font-size: 1.5rem;
+        }    
+    }
+
+    .formatos {
+        position: relative;
+        left: 2rem;
+        background-color: rgba(94, 208, 138, 0.7);
+        color: #000000;
+        font-weight: bold
+    }
+}
+
+/*------------- MEDIA QUERY TERCERA PARTE BIOMASA ----------*/
+
+@media (min-width: 569px) and (max-width: 1100px) {
+    .third__part__biomasa {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 220vh;
+        background-size: cover;
+        
+    }
+
+    .third__part__biomasa1 {
+        width: 34rem;
+        height: 50rem;
+        margin: 3em 0 0 1rem;
+        background-color: rgba(47, 196, 190, 0.5);
+        color: #dcc2e4;
+
+        h3 {
+            color: #000080;
+            font-size: 3.5rem;
+        }
+
+        p {
+            font-size: 2.5rem;
+
+            
+        }
+    }
+
+    .text__biomasa1 {
+            font-size: 2rem;
+    }
+
+    .images__biomasa {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        left: 5rem;
+        justify-content: start;
+        top: 32rem;
+        gap: 12rem;
+        
+        div {
+            font-size: 1.8rem;
+        }
+    }
+
+    .formatos {
+        font-size: 2rem;
+        height: 15rem;
+        background-color: rgba(94, 20, 138, 0.9);
+        color: bisque;
+        font-weight: bold;
+        border-radius: 10%;
+        
+    }
+}
+
+
+    .section__content {
+        opacity: 0;
+        animation: appear 5s forwards infinite;
+    }
+
+    @keyframes appear {
+        0% {
+            opacity: 0;
+            transform: translateY(50%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0%);
+        }
+    }
+
+    .section__content:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+
+    .section__content:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    .section__content:nth-child(3) {
+        animation-delay: 0.3s;
+    }
+
+    .section__content:nth-child(4) {
+        animation-delay: 0.4s;
+    }
+
+    .section__content:nth-child(4) {
+        animation-delay: 0.4s;
+    }
+
+    .section__content:nth-child(4) {
+        animation-delay: 0.4s;
+    }
+
+
+/*-------------------- CUARTA PARTE BIOMASA --------------------------*/
+
+.quarter__part__biomasa {
+    @include display-grid(flex, 0, 110vh, $font-dosis, 0);
+    justify-content: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.3)), url('../img/ALAMCENAMIENTO.jpg');
+    background-size: $b-size;
+
+    section {
+        background-color: rgba(255,148,54,0.66);
+        width: 28rem;
+        height: 38rem;
+        padding: 2rem 0 0 0;
+        text-align: center;
+        margin-top: 6rem;
+
+        h4 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+    }
+}
+
+.quarter__text__biomasa {
+    font-size: 2rem;
+    }
+}
+
+/*------------- MEDIA QUERY CUARTA PARTE BIOMASA----------*/
+
+@media (max-width: 568px) {
+    .quarter__part__biomasa {
+        height: 90vh;
+        background-size: cover;
+        padding-top: 4rem;
+
+        section {
+            background: linear-gradient(90deg, rgba(12,88,79,.6) 27%, rgba(40,9,121,.6) 66%, rgba(0,212,255,.4) 100%);
+            width: 24rem;
+            height: 40rem;
+            
+
+
+            h4 {
+                color: #F0FFF0;
+                font-size: 3rem;
+            }
+        }
+    }
+
+    .quarter__text__biomasa {
+        color: #F0FFF0;
+        font-size: 1.8rem;
+    }
+}
+
+/*------------- MEDIA QUERY CUARTA PARTE BIOMASA----------*/
+
+@media (min-width: 569px) and (max-width: 1100px) {
+    .quarter__part__biomasa {
+        height: 90vh;
+        background-size: cover;
+        padding-top: 4rem;
+
+        section {
+            background: linear-gradient(90deg, rgba(12,88,79,.6) 27%, rgba(40,9,121,.6) 66%, rgba(0,212,255,.4) 100%);
+            width: 34rem;
+            height: 40rem;
+            
+
+            h4 {
+                color: #F0FFF0;
+                font-size: 3.5rem;
+
+            }
+        }
+    }
+
+    .quarter__text__biomasa {
+        color: #F0FFF0;
+        
+    }
+}
+
+.smoke {
+
+    background-color: #000;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.2),
+        0 0 20px 5px rgba(255, 255, 255, 0.2),
+        0 0 30px 10px rgba(255, 255, 255, 0.2),
+        0 0 40px 15px rgba(255, 255, 255, 0.2),
+        0 0 50px 20px rgba(255, 255, 255, 0.2),
+        0 0 60px 25px rgba(255, 255, 255, 0.2),
+        0 0 70px 30px rgba(255, 255, 255, 0.2),
+        0 0 80px 35px rgba(255, 255, 255, 0.2),
+        0 0 90px 40px rgba(255, 255, 255, 0.2),
+        0 0 100px 45px rgba(255, 255, 255, 0.2);
+    animation: smoke 4s ease-in-out infinite;
+}
+
+    @keyframes smoke {
+        0% {
+            transform: scale(0.9);
+            opacity: 0.8;
+        }
+
+        50% {
+            transform: scale(1.1);
+            opacity: 0.4;
+        }
+
+        100% {
+            transform: scale(0.9);
+            opacity: 0.8;
+        }
+    }
+
+
+/*--------------------- PRIMERA PARTE PLANTA ------------------------*/
+
+
+.front__page__planta {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/LAPLANTA.jpg');
+    @include front-page(125vh, $b-size, $color-repet, 0, $font-encabezado-home);
+
+}
+
+.how__the__plant__works {
+    display: map-get($flex, d-flex );
+    align-items: map-get($flex, alinear-items );
+    justify-content: map-get($flex, justificar );
+    margin-bottom: 8rem;
+
+    a {
+        transform: translate(-40rem, 2rem);
+
+    }
+}
+
+.data__planta {
+    background-color: rgba(100,78,92,0.56);
+    font-size: 1.3rem;
+    font-family: fantasy;
+}
+
+.data__planta1 {
+    display: grid;
+    grid-template-columns: repeat(4, 10rem);
+    gap: 5rem;
+    justify-content: center;
+    color: #ADFF2F;
+    padding: 2rem;
+}
+
+.text__data__planta {
+    background: linear-gradient(0deg, rgba(34,193,195,0.6) 0%, rgba(136,43,139,0.6) 52%, rgba(203,51,50,0.6) 94%);
+    padding: 1rem;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    border-radius: 5%;
+}
+
+/*------------- MEDIA QUERY PRIMERA PARTE PLANTA ----------*/
+
+    @media (max-width: 582px) {
+        .front__page__planta {
+            height: 160vh;
+            background-size: cover;
+        }
+
+    .how__the__plant__works {
+    
+        a {
+            transform: translate(-10rem, 10rem);
+            margin-bottom: 5rem;
+        }
+    }
+
+    .data__planta {
+        font-family: 'Montserrat', sans-serif;
+        background-color: rgba(89, 91, 29, 0.4); 
+    }
+
+    .data__planta1 {
+        display: grid;
+        grid-template-columns: repeat(2, 8rem);
+        grid-template-rows: repeat(2, 5rem);
+        color: #F0F8FF;
+        font-weight: bold;
+    }
+
+    .text__data__planta {
+        background: radial-gradient(rgba(63,94,251,.6) 0%, rgba(14,14,40,.6) 100%);
+        padding: .8rem;
+        color: #F0F8FF;
+    }
+}
+
+/*------------- MEDIA QUERY PRIMERA PARTE PLANTA ----------*/
+
+    @media (min-width: 583px) and (max-width: 1100px) {
+        .front__page__planta {
+            height: 160vh;
+            background-size: cover;
+        }
+    
+        .how__the__plant__works {
+            
+    
+            a {
+                transform: translate(-10rem, 10rem);
+                margin-bottom: 5rem;
+            }
+        }
+    
+        .data__planta {
+            font-family: 'Montserrat', sans-serif;
+            background-color: rgba(89, 91, 29, 0.4); 
+        }
+    
+        .data__planta1 {
+            display: grid;
+            grid-template-columns: repeat(2, 14rem);
+            grid-template-rows: repeat(2, 5rem);
+            color: #F0F8FF;
+            font-weight: bold;
+    
+        }
+    
+        .text__data__planta {
+            background: radial-gradient(rgba(63,94,251,.6) 0%, rgba(14,14,40,.6) 100%);
+            padding: .8rem;
+            color: #F0F8FF;
+        }
+}
+
+.lucy {
+    
+    border-radius: 5%;
+}
+
+.lucy:nth-child(1) {
+    color: #F0F8FF;
+}
+
+.lucy:nth-child(2) {
+    color: #F0F8FF;
+}
+
+.lucy:nth-child(3) {
+    color: #F0F8FF;
+}
+
+.lucy:nth-child(4) {
+    color: #F0F8FF;
+}
+
+
+.presentation h3 {
+    animation: slideIn 5s forwards infinite;
+}
+
+.presentation p {
+    animation: slideIn 5s forwards infinite;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+/*--------------------------- SEGUNDA PARTE PLANTA -------------*/
+
+.second__part__planta {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/Ubicacionplanta.jpg');
+    @include front-page(110vh, cover, $color-repet, 0, $font-encabezado-home);
+
+    section {
+        @include display-grid(grid, repeat(2, 22rem), none, 0, 0);
+        justify-content: center;
+        padding-top: 2rem;
+
+        div {
+            padding: 2rem;
+            color: black;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+    } 
+}
+
+/*------------- MEDIA QUERY SEGUNDA PARTE PLANTA ----------*/
+
+    @media (max-width: 582px) {
+        .second__part__planta {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 85vh;
+
+            section {
+                margin: 3rem 0 0 2rem;
+
+                h2 {
+                    text-align: center;
+                    font-size: 2rem;
+                    font-weight: bold;  
+                }
+            }
+        }
+
+        .ubicacion__planta {
+            position: relative;
+            animation: jump 3s ease-in-out infinite;
+        } 
+
+        @keyframes jump {
+
+            0% {
+                transform: translateY(0);
+            }
+        
+            50% {
+                transform: translateY(-50px);
+            }
+        
+            100% {
+                transform: translateY(0);
+            }
+        }
+}
+
+/*------------- MEDIA QUERY SEGUNDA PARTE PLANTA ----------*/
+
+    @media (min-width: 583px) and (max-width: 1100px) {
+
+        .second__part__planta {
+            display: flex;
+            flex-direction: row;
+            
+            height: 85vh;
+
+            section {
+                margin: 3rem 0 0 8rem;
+                height: 35rem;
+
+                h2 {
+                    text-align: center;
+                    font-size: 2rem;
+                    font-weight: bold;
+
+                    
+                }
+            }
+        }
+
+        .ubicacion__planta {
+            position: relative;
+            animation: jump 3s ease-in-out infinite;
+        }
+
+        @keyframes jump {
+
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-50px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+}
+
+
+/*------------- MEDIA QUERY SEGUNDA PARTE PLANTA ----------*/
+
+@media (min-width: 1200px) and (max-width: 1920px) { 
+
+
+.ubicacion__planta:before,
+    .ubicacion__planta:after {
+        content: "";
+        position: absolute;
+        margin: 5rem 15rem;
+
+    }
+
+    .ubicacion__planta:before {
+        width: 50%;
+        height: 50%;
+        box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.3);
+        animation: explosion 4s ease-out forwards infinite;
+    }
+
+    .ubicacion__planta:after {
+        width: 50%;
+        height: 50%;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 80%;
+        animation: explosion2 3s ease-out forwards infinite;
+    }
+
+    @keyframes explosion {
+        0% {
+            box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.3);
+        }
+
+        30% {
+            box-shadow: 0px 0px 20px 20px rgba(255, 255, 255, 0.3);
+        }
+
+        100% {
+            box-shadow: 0px 0px 50px 50px rgba(255, 255, 255, 0);
+        }
+    }
+
+    @keyframes explosion2 {
+        0% {
+            transform: scale(0);
+        }
+
+        30% {
+            transform: scale(1.2);
+            opacity: 1;
+        }
+
+        100% {
+            transform: scale(1.5);
+            opacity: 0;
+        }
+    }
+
+}
+
+/*--------------------- TERCERA PARTE PLANTA -----------------*/
+
+.third__part__planta {
+    @extend %third__part__planta;
+
+}
+
+.ciclos__produc {
+    @include display-completo(grid, repeat(3, 10rem), repeat(3, 20rem), 15rem, center,'Barlow Semi Condensed', 0);
+    text-align: center;
+
+    img {
+        border-radius: 10%;
+    }
+}
+
+.ciclo__produccion__planta {
+    @include display-completo(flex, 0, 0, 0, center, 'Acme', column);
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 4rem;
+    background-color: rgba(0, 0, 255, 0.3);
+
+    h3 {
+        font-size: 3rem;
+    }
+}
+
+.orden {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10%;
+    padding: .5rem;
+    margin: 1rem 0 1rem 0;
+}
+
+.text__ciclo {
+    font-size: 1.2rem;
+}
+
+.titulo {
+    color: #000;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+/*------------- MEDIA QUERY TERCERA PARTE PLANTA ----------*/
+
+    @media (max-width: 582px) {
+        .third__part__planta {
+            height: 665vh;
+            background: linear-gradient(90deg, rgba(187,156,30,0.8520658263305322) 0%, rgba(183,150,82,1) 46%, rgba(253,146,32,0.6924019607843137) 100%, rgba(131,58,180,1) 100%, rgba(253,35,31,1) 100%);
+        }
+
+        .ciclos__produc {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        
+        }
+
+        .orden {
+            margin: 1rem 2rem 0 2rem;
+            font-size: 1.5rem;
+        }
+
+        .titulo {
+            font-size: 2rem;
+            
+        }
+
+        .text__ciclo {
+            font-size: 1.8rem;
+            padding: 1.5rem;
+            background-color: rgba(0, 0, 0, 0.1);
+            margin: 1rem;
+        }
+
+        .ciclo__produccion__planta {
+            background: linear-gradient(90deg, rgba(12,65,59,0.8) 27%, rgba(40,9,121,0.7512254901960784) 66%, rgba(0,138,255,0.6) 100%);
+
+            h3 {
+                font-size: 2.5rem;
+                
+                p {
+                    font-family: 2rem;
+                }
+            }
+        }
+}
+
+/*------------- MEDIA QUERY TERCERA PARTE PLANTA ----------*/
+
+    @media (min-width: 583px) and (max-width: 1100px) {
+        .third__part__planta {
+            height: 475vh;
+            background: linear-gradient(90deg, rgba(187,156,30,0.8520658263305322) 0%, rgba(183,150,82,1) 46%, rgba(253,146,32,0.6924019607843137) 100%, rgba(131,58,180,1) 100%, rgba(253,35,31,1) 100%);
+        }
+
+        .ciclos__produc {
+            display: grid;
+            grid-template-columns: repeat(2, 8rem);
+            grid-template-rows: repeat(4, 58rem);
+            width: auto;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .text__ciclo {
+            font-size: 1.8rem;
+            width: auto;
+        }
+}
+
+    .img__ciclos {
+        animation: sink 7s infinite;
+    }
+
+    .img__ciclos:nth-child(1) {
+        left: 10%;
+        animation-delay: 0.4s;
+    }
+
+    .img__ciclos:nth-child(2) {
+        left: 10%;
+        animation-delay: 0.4s;
+    }
+
+    .img__ciclos:nth-child(3) {
+        left: 10%;
+        animation-delay: 0.6s;
+    }
+
+    .img__ciclos:nth-child(4) {
+      left: 10%;
+      animation-delay: 0.8s;
+  }
+
+  .img__ciclos:nth-child(5) {
+      left: 10%;
+      animation-delay: 1s;
+  }
+
+  .img__ciclos:nth-child(6) {
+        left: 10%;
+        animation-delay: 1.2s;
+    }
+
+    .img__ciclos:nth-child(7) {
+        left: 10%;
+        animation-delay: 1.2s;
+    }
+
+    .img__ciclos:nth-child(8) {
+        left: 10%;
+        animation-delay: 1.2s;
+    }
+
+    @keyframes sink {
+
+    0% {
+            bottom: -10px;
+            transform: scale(.4);
+        }
+    
+        30% {
+            transform: scale(.5);
+        }
+    
+        50% {
+            bottom: 10px;
+            transform: scale(.7);
+        }
+    
+        80% {
+            transform: scale(.9);
+        }
+    
+        100% {
+            bottom: -10px;
+            transform: scale(1);
+        }
+    }
+
+
+
+/*---------------------- PRIMERA PARTE ENERGIA ---------------*/
+
+
+.front__page__energia {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/ENERGIAportada.jpg');
+    @include front-page(110vh, cover, $color-repet, 0, $font-encabezado-home);
+}
+
+.clean__energy {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin-bottom: 8rem;
+
+
+    a {
+        transform: translate(-40rem, 20rem);
+
+    }
+}
+
+/*------------- MEDIA QUERY PRIMERA PARTE ENERGIA ----------*/
+
+    @media (max-width: 568px) {
+
+        .front__page__energia {
+            height: 80vh;
+            background-size: cover;
+        }
+
+        .clean__energy {
+            display: grid;
+            margin: 8rem 0 8rem 0;
+        
+        
+            a {
+                transform: translate(7rem, 6rem);
+        
+            }
+        }
+}
+
+/*------------- MEDIA QUERY PRIMERA PARTE ENERGIA ----------*/
+
+@media (min-width: 569px) and (max-width: 1100px) {
+    .front__page__energia {
+        height: 80vh;
+        background-size: cover;
+    }
+
+    .clean__energy {
+        display: grid;
+        margin: 12rem 0 12rem 0;
+    
+    
+        a {
+            transform: translate(7rem, 6rem);
+    
+        }
+    }
+}
+
+/*--------------------------- SEGUNDA PARTE ENERGIA ----------------*/
+
+.second__part__energia {
+    @include front-page(115vh, cover, $color-repet, 0, $font-encabezado-home);
+    background: linear-gradient(90deg, rgba(46,112,185,0.7652310924369747) 32%, rgba(30,176,187,1) 47%, rgba(131,58,180,1) 100%, rgba(253,35,31,1) 100%, rgba(253,39,32,1) 100%, rgba(252,176,69,1) 100%);
+    display: flex;
+}
+
+.energia__limpia {
+    @include display-completo(flex, 0, 0, 3rem, 0, 'Times New Roman', column );
+    margin: 4rem 0 0 2rem;
+
+    section {
+        text-align: center;
+    }
+    p {
+        text-align: center;
+        padding-top: 2rem;
+        font-size: 1.2rem;
+        width: 50rem; 
+    }
+}
+
+.titulo__second {
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 6rem 6rem 0 6rem ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    h2 {
+        color: #ADFF2F;
+        font-size: 3rem;
+        
+    }
+}
+
+/*------------- MEDIA QUERY SEGUNDA PARTE ENERGIA ----------*/
+
+    @media (max-width: 568px) {
+
+        .second__part__energia {
+            display: flex;
+            flex-direction: column;
+            height: 280vh;
+            background-image: linear-gradient(to top, #23798d, #007aa8, #0077c5, #006fde, #1260eb);
+        }
+
+        .titulo__second {
+            background-image: linear-gradient(to bottom, #234e8d, #254fad, #424bc8, #6d3ede, #9e12eb);
+
+            h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        .energia__limpia {
+            padding: 2rem;
+            display: flex;
+            gap: 10rem;
+            margin-right: 6rem;
+
+            span {
+                color: #000000;
+                font-weight: bold;
+                
+            }
+
+            p {
+                font-size: 1.8rem;
+                background-color: rgba(0, 0, 0, 0.2);
+                padding: 1rem;
+                margin-top: 2rem;
+                width: 20rem;
+            } 
+        }
+}
+
+/*------------- MEDIA QUERY SEGUNDA PARTE ENERGIA ----------*/
+
+    @media (min-width: 569px) and (max-width: 1100px) {
+
+        .second__part__energia {
+            display: flex;
+            flex-direction: column;
+            height: 300vh;
+            background-image: linear-gradient(to top, #23798d, #007aa8, #0077c5, #006fde, #1260eb);
+            
+        }
+
+        .titulo__second {
+            background-image: linear-gradient(to bottom, #234e8d, #254fad, #424bc8, #6d3ede, #9e12eb);
+
+            h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        .energia__limpia {
+            padding: 2rem;
+            display: flex;
+            gap: 10rem;
+            margin-right: 12rem;
+            
+
+            span {
+                color: #000000;
+                font-weight: bold;
+                
+            }
+
+            p {
+                font-size: 1.8rem;
+                background-color: rgba(0, 0, 0, 0.2);
+                padding: 2rem;
+                margin-top: 2rem;
+                width: 25rem;
+                
+            }
+            
+        }
+    }
+
+    /*------------- MEDIA QUERY SEGUNDA PARTE ENERGIA ----------*/
+
+    @media (min-width: 1101px) and (max-width: 1411px) {
+
+        .energia__limpia {
+        
+            section {
+                text-align: center;
+            }
+            p {
+                text-align: center;
+                padding-top: 2rem;
+                font-size: 1.2rem;
+                width: 30rem;
+            }
+        }
+    }
+
+        .llama {
+            width: 100px;
+            height: 150px;
+            margin-left: 6rem;
+            margin-top: 2rem;
+            background: linear-gradient(to bottom, #ff9d00, #ff3200);
+            border-radius: 50% 50% 0 0;
+            position: relative;
+            animation: llama 2s ease-in-out infinite alternate;
+        }
+    
+        .llama::before {
+            content: "";
+            width: 50px;
+            height: 50px;
+            background: #fff;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -25px;
+            left: 25px;
+        }
+    
+        .llama::after {
+            content: "";
+            width: 30px;
+            height: 30px;
+            background: rgba(12,65,59,0.6083683473389356);
+            border-radius: 50%;
+            position: absolute;
+            bottom: -15px;
+            left: 45px;
+        }
+    
+        @keyframes llama {
+            0% {
+                transform: rotate(-5deg) scale(1);
+                box-shadow: 0 0 0 0 #ff9d00, 0 0 0 5px #ff3200;
+                
+            }
+            
+            50% {
+                clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+                rotate: 380deg;
+            }
+
+            100% {
+                transform: rotate(5deg) scale(1.1);
+                box-shadow: 0 0 0 10px rgba(0, 0, 0, 0), 0 0 0 20px rgba(0, 0, 0, 0), 0 0 0 30px rgba(0, 0, 0, 0.2), 0 0 0 40px rgba(0, 0, 0, 0.2), 0 0 0 50px rgba(0, 0, 0, 0.2), 0 0 0 60px rgba(0, 0, 0, 0.2), 0 0 0 70px rgba(0, 0, 0, 0.2), 0 0 0 80px rgba(0, 0, 0, 0.2), 0 0 0 90px rgba(0, 0, 0, 0.2), 0 0 0 100px rgba(0, 0, 0, 0.2), 0 0 0 110px rgba(0, 0, 0, 0.2), 0 0 0 120px rgba(0, 0, 0, 0.2), 0 0 0 130px rgba(0, 0, 0, 0.2), 0 0 0 140px rgba(0, 0, 0, 0.2), 0 0 0 150px rgba(0, 0, 0, 0.2), 0 0 0 160px rgba(0, 0, 0, 0.2), 0 0 0 170px rgba(0, 0, 0, 0.2), 0 0 0 180px rgba(0, 0, 0, 0.2), 0 0 0 190px rgba(0, 0, 0, 0.2),
+                    200px rgba(0, 0, 0, 0.2), 0 0 0 210px rgba(0, 0, 0, 0.2), 0 0 0 220px rgba(0, 0, 0, 0.2), 0 0 0 230px rgba(0, 0, 0, 0.2), 0 0 0 240px rgba(0, 0, 0, 0.2), 0 0 0 250px rgba(0, 0, 0, 0.2), 0 0 0 260px rgba(0, 0, 0, 0.2), 0 0 0 270px rgba(0, 0, 0, 0.2), 0 0 0 280px rgba(0, 0, 0, 0.2), 0 0 0 290px rgba(0, 0, 0, 0.2), 0 0 0 300px rgba(0, 0, 0, 0.2), 0 0 0 310px rgba(0, 0, 0, 0.2), 0 0 0 320px rgba(0, 0, 0, 0.2), 0 0 0 330px rgba(0, 0, 0, 0.2), 0 0 0 340px rgba(0, 0, 0, 0.2), 0 0 0 350px rgba(0, 0, 0, 0.2), 0 0 0 360px rgba(0, 0, 0, 0.2), 0 0 0 370px rgba(0, 0, 0, 0.2), 0 0 0 380px rgba(0, 0, 0, 0.2), 0 0 0 390px rgba(0, 0, 0, 0.2), 0 0 0 400px rgba(0, 0, 0, 0.2);
+                    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            }
+}
+
+/*------------- MEDIA QUERY SEGUNDA PARTE ENERGIA ----------*/
+
+@media (min-width: 1401px) and (max-width: 1920px) { 
+
+.bolt {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translate(-50%, -50%);
+}
+
+.bolt-top,
+.bolt-bottom {
+    position: absolute;
+    background-color: #fff;
+    opacity: 0;
+    animation-name: electric;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.bolt-top {
+    width: 90rem;
+    height: 60px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    top: 0;
+    left: 0;
+}
+
+.bolt-bottom {
+    width: 90rem;
+    height: 60px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    top: 60px;
+    left: 10px;
+}
+
+@keyframes electric {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    100% {
+        opacity: 1;
+        background-color: rgba(109, 85, 132, 0.3);
+        }
+    }
+}
+
+/*--------------------........... TERCERA PARTE ENERGIA .............----------------*/
+
+
+.third__part__energia {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/FOCO.jpg');
+    @include front-page(115vh, cover, $color-repet, $padding-top, $font-encabezado-home);
+    display: flex;
+    justify-content: center;
+}
+
+.third__part {
+    background-color: rgba(200,35,31,.4);
+    height: 36rem;
+    padding: 5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+
+        h3 {
+            font-size: 40px;
+            color: #3CB371;
+            font-weight: bold;
+        }
+
+            p {
+                font-size: 30px;
+    }
+}
+
+/*------------- MEDIA QUERY TERCERA PARTE ENERGIA ----------*/
+
+    @media (max-width: 568px) {
+
+        .third__part__energia {
+            background-size: cover;
+        }
+        .third__part {
+            background-color: rgba(227, 249, 149, 0.6);
+            height: 40rem;
+            padding: 2rem;
+            
+            h3 {
+                color: #6d3ede;
+                font-size: 1.8rem;
+                
+            }
+
+            p {
+                font-size: 1.5rem;
+                padding: 1rem;
+                color: #dcc2e4;
+            }
+        }
+
+        .third__part {
+            background-color: black;
+            box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.8) inset,
+                        0 0 30px 10px rgba(255, 255, 255, 0.4),
+                        0 0 100px 40px rgba(255, 255, 255, 0.2);
+            animation: turn-on 3s forwards infinite;
+
+        @keyframes turn-on {
+            0% {
+                box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.8) inset,
+                    0 0 30px 10px rgba(255, 255, 255, 0.4),
+                    0 0 100px 40px rgba(255, 255, 255, 0.2);
+            }
+        
+            30% {
+                box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.8) inset,
+                    0 0 40px 20px rgba(255, 255, 255, 0.4),
+                    0 0 100px 60px rgba(255, 255, 255, 0.2);
+            }
+        
+            50% {
+                box-shadow: 0 0 30px 0 rgba(255, 255, 255, 0.8) inset,
+                    0 0 50px 30px rgba(255, 255, 255, 0.4),
+                    0 0 100px 80px rgba(255, 255, 255, 0.2);
+            }
+        
+            80% {
+                box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.8) inset,
+                    0 0 30px 20px rgba(255, 255, 255, 0.4),
+                    0 0 100px 60px rgba(255, 255, 255, 0.2);
+            }
+        
+            100% {
+                box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.8) inset,
+                    0 0 30px 30px rgba(255, 255, 255, 0.4),
+                    0 0 100px 80px rgba(255, 255, 255, 0.2);
+            }
+        }
+    }
+}
+
+/*------------- MEDIA QUERY TERCERA PARTE ENERGIA ----------*/
+
+    @media (min-width: 569px) and (max-width: 1100px) {
+        .third__part__energia {
+            background-size: cover;
+        }
+        .third__part {
+            background-color: rgba(227, 249, 149, 0.6);
+            height: 45rem;
+            padding: 5rem;
+
+            h3 {
+                color: #6d3ede;
+                
+            }
+
+            p {
+                font-size: 1.9rem;
+                padding: 1rem;
+                color: #dcc2e4;
+            }
+        }
+    }
+
+
+/*------------- MEDIA QUERY TERCERA PARTE ENERGIA ----------*/
+
+    @media (min-width: 569px) and (max-width: 1920px) {
+
+    
+    .third__part {
+        background-color: black;
+        border-radius: 50%;
+        box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.8) inset,
+                    0 0 30px 10px rgba(255, 255, 255, 0.4),
+                    0 0 100px 40px rgba(255, 255, 255, 0.2);
+        animation: turn-on 3s forwards infinite;
+    @keyframes turn-on {
+        0% {
+            box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.8) inset,
+                0 0 30px 10px rgba(255, 255, 255, 0.4),
+                0 0 100px 40px rgba(255, 255, 255, 0.2);
+        }
+    
+        30% {
+            box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.8) inset,
+                0 0 40px 20px rgba(255, 255, 255, 0.4),
+                0 0 100px 60px rgba(255, 255, 255, 0.2);
+        }
+    
+        50% {
+            box-shadow: 0 0 30px 0 rgba(255, 255, 255, 0.8) inset,
+                0 0 50px 30px rgba(255, 255, 255, 0.4),
+                0 0 100px 80px rgba(255, 255, 255, 0.2);
+        }
+    
+        80% {
+            box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.8) inset,
+                0 0 30px 20px rgba(255, 255, 255, 0.4),
+                0 0 100px 60px rgba(255, 255, 255, 0.2);
+        }
+    
+        100% {
+            box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.8) inset,
+                0 0 30px 30px rgba(255, 255, 255, 0.4),
+                0 0 100px 80px rgba(255, 255, 255, 0.2);
+            }
+        }
+    }
+}
+/*-------------------- ------ PRIMERA PARTE COMUNIDAD ------------------*/
+
+.front__page__comunidad {
+    @include front-page(110vh, cover, $color-repet, 0, $font-encabezado-home);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('../img/comunidad.jpg');
+}
+
+.community__engagement {
+    display: map-get($flex, d-flex );
+    align-items: map-get($flex , alinear-items );
+    justify-content: map-get($flex, justificar );
+    margin-bottom: 8rem;
+    text-align: center;
+
+    a {
+        transform: translate(-40rem, 20rem);
+    }
+}
+
+.data__comunidad {
+    @include display-completo(grid, repeat(2, 30rem), 0, 4rem, center, fantasy, 0);
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(90deg, rgba(21,122,130,0.6643907563025211) 10%, rgba(99,21,130,0.4375) 50%, rgba(21,41,130,0.6643907563025211) 100%, rgba(0,138,255,0.6559873949579832) 100%);
+}
+
+/*------------- MEDIA QUERY PRIMERA PARTE COMUNIDAD ----------*/
+
+    @media (max-width: 568px) {
+        .front__page__comunidad {
+            height: 80vh;
+        }
+
+        .community__engagement {
+                display: grid;
+                justify-content: center;
+
+                h1 {
+                    font-weight: bold;
+                    margin-top: 5rem;
+            }
+        
+                a {
+                    transform: translate(0rem, 7rem);
+            }
+        }
+
+        .data__comunidad {
+            @include display-completo(grid, repeat(2, 10rem), 0, 5rem, center, fantasy, 0);
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(90deg, rgba(12,65,59,0.6083683473389356) 100%, rgba(0,138,255,0.6559873949579832) 100%);
+            color: #000000;
+        }
+
+        .numero__comunidad {
+            margin-top: 6rem
+        }
+    }
+
+    /*------------- MEDIA QUERY PRIMERA PARTE COMUNIDAD ----------*/
+
+    @media (min-width: 569px) and (max-width: 1100px) {
+        .front__page__comunidad {
+            height: 90vh;
+        }
+    
+        .community__engagement {
+                display: grid;
+                justify-content: center;
+            h1 {
+                font-weight: bold;
+                margin-top: 8rem;
+            }
+        
+            a {
+                transform: translate(0rem, 7rem);
+            }
+        }
+    
+        .data__comunidad {
+            @include display-completo(grid, repeat(2, 15rem), 0, 5rem, center, fantasy, 0);
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(90deg, rgba(12,65,59,0.6083683473389356) 100%, rgba(0,138,255,0.6559873949579832) 100%);
+            color: #000000;
+        }
+    
+        .numero__comunidad {
+            margin-top: 6rem
+        }
+    }
+
+        .resaltar {
+            background-color: linear-gradient(to bottom, #797215, #8b8e10, #99ab09, #a3ca07, #a8eb12);
+            animation: highlight 1s infinite alternate;
+        }
+    
+        @keyframes highlight {
+            from {
+                background-image: linear-gradient(to bottom, #797215, #8b8e10, #99ab09, #a3ca07, #a8eb12);;
+            }
+    
+            to {
+                background-image: linear-gradient(to right, #c5dbdd, #bcd7de, #b5d3e0, #b1cee2, #afc9e3);
+            }
+        }
+
+/*----------------------------- SEGUNDA PARTE COMUNIDAD --------------------------------*/
+
+.second__part__comunidad {
+    @include display-completo(flex, 0, 0, 5rem, 0, $font-encabezado-home, 0);
+    background: radial-gradient(circle, rgba(109,85,132,1) 23%, rgba(34,62,94,1) 100%);
+    height: 110vh;
+    background-size: cover;
+    color: #F0F8FF;
+
+    section {
+        background: radial-gradient(circle, rgba(120,102,78,1) 46%, rgba(34,62,94,0.9080882352941176) 100%);
+        padding: 15rem 6rem 0 6rem ;
+        text-align: center;
+    }
+}
+
+.puntos__comunidad {
+    padding-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*------------- MEDIA QUERY SEGUNDA PARTE COMUNIDAD ----------*/
+
+    @media (max-width: 568px) {
+
+        .second__part__comunidad {
+            display: flex;
+            flex-direction: column;
+            height: 170vh;
+
+            section {
+                padding: 3rem;
+
+                h2 {
+                    font-weight: bold;
+                }
+                
+            }
+        }
+
+        .puntos__comunidad {
+            padding: 2.5rem 2rem;
+            display: flex;
+            gap: 4rem;
+            font-size: 1.2rem;
+            text-align: center;
+            align-items: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .title-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .title {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+            color: white;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+        }
+
+}
+
+/*------------- MEDIA QUERY SEGUNDA PARTE COMUNIDAD ----------*/
+
+    @media (min-width: 569px) and (max-width: 1100px) {
+
+        .second__part__comunidad {
+            display: flex;
+            flex-direction: column;
+            height: 170vh;
+
+            section {
+                padding: 3rem;
+
+                h2 {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .puntos__comunidad {
+            padding: 2.5rem 2rem;
+            display: flex;
+            gap: 4rem;
+            font-size: 1.2rem;
+            text-align: center;
+            align-items: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .title-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .title {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+            color: white;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+        }
+    }
+
+    /*------------- MEDIA QUERY SEGUNDA PARTE COMUNIDAD ----------*/
+
+    @media (min-width: 1200px) and (max-width: 1920px) { 
+
+    .thumb {
+        width: 30rem;
+        height: 30rem;
+        margin: 0 16rem 0 6rem;
+        perspective: 1000px;
+        transform: translate(28rem, -18rem);
+    }
+
+    .thumb a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(21,122,130,0.6643907563025211) 10%, rgba(99,21,130,0.4375) 100%, rgba(21,41,130,0.6643907563025211) 100%, rgba(0,138,255,0.6559873949579832) 100%), 
+            url("https://d13yacurqjgara.cloudfront.net/users/269311/screenshots/1508393/the_optimist_lives_on_by_huanle-d6yprp1_o_1x.jpg");
+        background-size: 0, cover;
+        transform-style: preserve-3d;
+        transition: all 0.8s;
+    }
+    
+    .thumb:hover a {
+        transform: rotateX(80deg);
+        transform-origin: bottom;
+        
+    }
+    .thumb a:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 40px;
+        background: inherit;
+        background-size: cover, cover;
+        background-position: bottom;
+        transform: rotateX(90deg);
+        transform-origin: bottom;
+
+    }
+    .thumb a span {
+        color: white;
+        text-transform: uppercase;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        font: bold 12px/36px "Open Sans";
+        text-align: center;
+        transform: rotateX(-89.99deg);
+        transform-origin: top;
+        z-index: 1;
+        font-size: 3rem;
+
+
+    }
+    .thumb a:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 100px 50px rgba(0, 0, 0, 0.5);
+        transition: all 0.5s;
+        opacity: 0.15;
+        transform: rotateX(95deg) translateZ(-80px) scale(0.75);
+        transform-origin: bottom;
+    }
+    
+    .thumb:hover a:before {
+        opacity: 1;
+        box-shadow: 0 0 25px 25px rgba(0, 0, 0, 0.5);
+        transform: rotateX(0) translateZ(-60px) scale(0.85);
+    }
+
+    #imagen1 {
+    position: relative;
+    transform: translateY(-50%);
+    }
+
+    #imagen2 {
+        position: relative;
+        transform: translateY(-80%);
+        }
+
+    #imagen3 {
+        position: relative;
+        transform: translateY(-50%);
+    }
+        
+    }
+
+/*------------- MEDIA QUERY SEGUNDA PARTE COMUNIDAD ----------*/
+
+@media (min-width: 1300px) and (max-width: 1920px) { 
+
+.title-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+.star {
+    background-color: white;
+    animation: float 5s ease-in-out infinite alternate;
+    opacity: 0;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(10px, -10px);
+        width: 1rem;
+        height: 5rem;
+        opacity: 1;
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    }
+
+    100% {
+        transform: translate(0, 0);
+        clip-path: ellipse(25% 40% at 50% 50%);
+        width: 1rem;
+        height: 5rem;
+        scale: 1rem;
+        }
+    }
+}
+
+
+
+
+.titulooo {
+    font-size: 100px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+.titulooo {
+    /* ... */
+    animation: colorChange 1s ease-in-out infinite;
+}
+
+@keyframes colorChange {
+    0% {
+        -webkit-text-stroke-width: 1px;
+    }
+    50% {
+        -webkit-text-stroke-width: 2px;
+    }
+    100% {
+        -webkit-text-stroke-width: 1px;
+    }
+}

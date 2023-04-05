@@ -1,0 +1,164 @@
+
+
+@media (max-width: 568px) {
+    
+    /*----------------- PRIMERA PARTE HOME -----------------*/
+
+    .links__home {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        
+    }
+
+    .ciclo__virtuosoo {
+        font-size: .7rem;
+        border-radius: none;
+
+    }
+
+    .fuentes_renovable {
+        font-size: .8rem;
+        text-align: center;
+        margin-right: 2rem;
+            
+    }
+
+    #fireworks {
+        position: absolute;
+        padding: 5rem;
+        top: 150%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        animation: fireworks 10s ease-out forwards infinite;
+    }
+    
+    @keyframes fireworks {
+        0% {
+            width: 0;
+            height: 0;
+            opacity: 0;
+        }
+    
+        50% {
+            width: 400px;
+            height: 400px;
+            opacity: 1;
+        }
+    
+        100% {
+            width: 0;
+            height: 0;
+            opacity: 0;
+        }
+    }
+    
+    .firework {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        animation: explode 1s ease-out infinite;
+    }
+    
+    @keyframes explode {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    
+        50% {
+            transform: scale(5);
+            opacity: 0.5;
+        }
+    
+        100% {
+            transform: scale(10);
+            opacity: 0;
+        }
+    }
+
+/*----------------------- TERCERA PARTE HOME ----------------------*/
+
+.third__part__home {
+    display: grid;
+    justify-content: center;
+    height: 80vh;
+
+
+    section {
+        height: 52rem;
+        width: 21rem;
+        margin-right: 29rem; 
+        margin-top: 3rem;
+        padding: 1rem;
+    
+    
+        p {
+            font-size: 1.5rem;
+            
+            }
+        }
+    }
+}
+
+
+
+
+
+@media (min-width: 569px) and (max-width: 1100px) {
+
+
+/*--------------------------- PRIMERA PARTE HOME --------------------*/
+
+body {
+    width: 100%;
+}
+
+
+.links__home {
+    gap: 3rem;
+    font-size: 1rem;
+}
+
+
+.ciclo__virtuosoo {
+    font-size: 1rem;
+    border-radius: none;
+
+}
+
+    .fuentes_renovable {
+        font-size: 1rem;
+        text-align: center;
+        
+    }
+
+/*---------------------------- TERCERA PARTE HOME -------------------*/
+
+.third__part__home {
+    display: grid;
+    justify-content: center;
+    height: 190vh;
+
+    section {
+            height: 55rem;
+            padding: 0;
+            margin: 0;
+            width: 40rem;
+            margin-right: 25rem; 
+            margin-top: 6rem;
+        
+
+
+            p {
+                font-size: 2.3rem;
+            
+            }    
+        }
+    }
+}
